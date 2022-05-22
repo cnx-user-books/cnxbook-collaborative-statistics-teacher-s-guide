@@ -1,0 +1,79 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Hypothesis Testing: Two Population Means and Two Population Proportions: Teacher's Guide</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>10458fd8-b792-4bbf-a896-a7d4c080b88f</md:uuid>
+</metadata>
+  <content>
+    <para id="id12899924">The comparison of two groups is done constantly in business, medicine, and education, to name just a few areas. You can start this chapter by asking students if they have read anything on the Internet or seen on television any studies that involve two groups. Examples include diet versus hypnotism, Bufferin® with aspirin versus Tylenol®, Pepsi Cola® versus Coca Cola®, and Kellogg's Raisin Bran® versus Post Raisin Bran®. There are hundreds of examples on the Internet, in newspapers, and in magazines.</para>
+
+
+<para id="id128999243">This chapter covers independent groups for two population means and two population proportions and matched or paired samples. <emphasis>The module relies heavily on technology. Instructions for the TI-83/84 series of calculators are included for each example.</emphasis> If you and your class are interested, the formulas for the test statistics are included in the text.
+</para>
+
+<para id="id1254899924">Doing problems 1 - 10 in the <link document="m17023">Homework</link> helps the students to determine what kind of hypothesis test they should perform.</para>
+
+<example id="ooo24"><title>Matched or Paired Samples</title><para id="problem1"> A course is designed to increase mathematical comprehension. In order to evaluate the effectiveness of the course, students are given a test before and after the course. The sample data is:</para><table id="id13690072" summary="This table presents the sample data for the results of the course effectiveness evaluation.">
+
+      <tgroup cols="8">
+        <colspec colnum="1" colname="header_c1"/>
+        <colspec colnum="2" colname="c2"/>
+        <colspec colnum="3" colname="c3"/>
+        <colspec colnum="4" colname="c4"/>
+        <colspec colnum="5" colname="c5"/>
+        <colspec colnum="6" colname="c6"/>
+        <colspec colnum="7" colname="c7"/>
+        <colspec colnum="8" colname="c8"/>
+        <tbody>
+          <row>
+            <entry>Before Course </entry>
+            <entry>90</entry>
+            <entry>100</entry>
+            <entry>160</entry>
+            <entry>112</entry>
+            <entry>95</entry>
+            <entry>190</entry>
+            <entry>125</entry>
+          </row>
+          <row>
+            <entry>After Course</entry>
+            <entry>120</entry>
+            <entry>95</entry>
+            <entry>150</entry>
+            <entry>150</entry>
+            <entry>100</entry>
+            <entry>200</entry>
+            <entry>120</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+</example>
+
+<example id="ex3"><title>Two Proportions, Independent Groups</title><para id="problem2">Suppose in the last local election, among 240 30-45 year olds, 45% voted and among 260 46-60 year olds, 50% voted. Does the data indicate that the proportion of 30-45 year olds who voted is less than the proportion of 46-60 year olds? Test at a 1% level of significance.</para><para id="element-934"><list id="list2"><title>Firm A: </title><item> 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:msub><m:mi>N</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mi>A</m:mi></m:mrow></m:mstyle></m:msub><m:mo stretchy="false">=</m:mo><m:mtext>20</m:mtext></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{N rSub { size 8{A} } ="20"} {}</m:annotation></m:semantics></m:math></item><item><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mrow><m:msub><m:mi>S</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mi>A</m:mi></m:mrow></m:mstyle></m:msub><m:mo stretchy="false">=</m:mo><m:mi>$</m:mi></m:mrow><m:mtext>100</m:mtext></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{S rSub { size 8{A} } =$"100"} {}</m:annotation></m:semantics></m:math><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mrow><m:mover accent="true"><m:msub><m:mi>X</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mi>A</m:mi></m:mrow></m:mstyle></m:msub><m:mo>¯</m:mo></m:mover><m:mo stretchy="false">=</m:mo><m:mi>$</m:mi></m:mrow><m:mtext>1500</m:mtext></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ {overline  {X rSub { size 8{A} } }} =$"1500"} {}</m:annotation></m:semantics></m:math></item></list></para><para id="element-670"><list id="list3"><title>Firm B:</title><item> 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:msub><m:mi>N</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mi>B</m:mi></m:mrow></m:mstyle></m:msub><m:mo stretchy="false">=</m:mo><m:mtext>22</m:mtext></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{N rSub { size 8{B} } ="22"} {}</m:annotation></m:semantics></m:math></item><item><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mrow><m:msub><m:mi>S</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mi>B</m:mi></m:mrow></m:mstyle></m:msub><m:mo stretchy="false">=</m:mo><m:mi>$</m:mi></m:mrow><m:mtext>200</m:mtext></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{S rSub { size 8{B} } =$"200"} {}</m:annotation></m:semantics></m:math><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mrow><m:mover accent="true"><m:msub><m:mi>X</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mi>B</m:mi></m:mrow></m:mstyle></m:msub><m:mo>¯</m:mo></m:mover><m:mo stretchy="false">=</m:mo><m:mi>$</m:mi></m:mrow><m:mtext>1900</m:mtext></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ {overline  {X rSub { size 8{B} } }} =$"1900"} {}</m:annotation></m:semantics></m:math></item></list></para><para id="element-990">Test the claim that the average price of Firm A's laptop is no different from the average price of Firm B's laptop.</para></example>
+
+<para id="id128999324"><title>Calculator Instructions</title>If you use the TI83/84 series, the functions are located in STATS TESTS. The function for two proportions is 2-PropZTest, the function for two means is 2-SampTTest if the population standard deviations are not known and 2-SampZTest if the population standard deviations are known (highly unlikely). The function for matched pairs is T-test (the same test used for test of a single mean) because you combine two measurements for each object into a single set of "difference" data. For the function 2-SampTTest, answer "NO" to "Pooled."</para>
+
+<para id="id12899922414"><title>Assign Practice</title>Have students do the <link document="m17027">Practice 1</link> and <link document="m17039">Practice 2</link> collaboratively in class. These practices are for two proportions and two means. For matched pairs, you could have them do Example 10-7 in the text.</para>
+
+<para id="id128990924"><title>Assign Homework</title>Assign <link document="m17023">Homework</link>. Suggested homework problems: 1 - 10, 11, 13, 15, 17, 19, 23, 25, 31, 39 - 52.</para>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </content>
+</document>

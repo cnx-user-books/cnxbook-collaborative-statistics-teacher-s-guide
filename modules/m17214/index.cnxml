@@ -1,0 +1,66 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Suggested Plan for Teaching the Course</title>
+  <metadata>
+  <md:content-id>m17214</md:content-id><md:title>Suggested Plan for Teaching the Course</md:title>
+  <md:abstract>This module provides a suggested plan for teaching a statistics course using the Collaborative Statistics collection (col10522).</md:abstract>
+  <md:uuid>6a6ae866-ede9-4e12-a8aa-ca2231dce3de</md:uuid>
+</metadata>
+  <content>
+    <para id="element-457">Each chapter is <emphasis>interactive</emphasis>. Students should fill in the blanks and answer the questions.</para><para id="element-112">At the end of each chapter is at least one <emphasis>practice</emphasis>. The practice leads the students step-by-step through problems. We, the authors, start the practices in calss with students working in groups of 2, 3, or 4. The students finish the practices at home. The <emphasis>practice</emphasis> is after the chapter reading but before the homework.</para><para id="delete_me">The back of the book contains answers to the odd-numbered <emphasis>homework</emphasis> problems. <emphasis> In this plan (this document), the suggested homework is listed at the end of the chapter discussion.</emphasis></para><para id="element-285">At the end of each chapter (after the homework), there is at least one <emphasis>lab</emphasis>. The labs use real data collected by the instructor or the students or both. We often use the class to collect data. Labs may be done in groups and are an excellent teaching tool especially if they are started in class.  The book contains the following labs:
+
+<list id="labs1list" list-type="labeled-item" mark-suffix=":">
+
+<item><label>Ch. 1</label>Data Collection Lab I (number of movies viewed)</item>
+<item><label>Ch. 1</label>Sampling Experiment Lab II (table of restaurants provided)</item>
+<item><label>Ch. 2</label>Descriptive Statistics Lab (number of pairs of shoes)</item>
+<item><label>Ch. 3</label>Probability Lab (counting M&amp;M's)</item>
+<item><label>Ch. 4</label>Discrete Distribution Lab I (picking playing cards)</item>
+<item><label>Ch. 4</label>Discrete Distribution Lab II (Tet game)</item>
+<item><label>Ch. 5</label>Continuous Distribution Lab (generate random numbers)</item>
+<item><label>Ch. 6</label>Normal Distribution Lab I (Terry Vogel's lap times provided)</item>
+<item><label>Ch. 6</label>Normal Distribution Lab II (measure pinkie fingers)</item>
+<item><label>Ch. 7</label>Central Limit Theorem Lab I (counting change)</item>
+<item><label>Ch. 7</label>Central Limit Theorem Lab II (cookie recipes)</item>
+<item><label>Ch. 8</label>Confidence Interval Lab I (real estate prices)</item>
+<item><label>Ch. 8</label>Confidence Interval Lab II (students born in state)</item>
+<item><label>Ch. 8</label>Confidence Interval Lab III (heights of women)</item>
+<item><label>Ch. 9</label>Hypothesis Testing Lab - Single Mean and Single Proportion (3 tests)</item>
+<item><label>Ch. 10</label>Hypothesis Testing Lab - Two Means and Two Proportions (3 tests)</item>
+<item><label>Ch. 11</label>Chi-Square Goodness of Fit Lab I (grocery store receipts)</item>
+<item><label>Ch. 11</label>Chi-Square Test for Independence Lab II (favorite snack/gender)</item>
+<item><label>Ch. 12</label>Regression Lab I (distance from school vs. cost of supplies this term)</item>
+<item><label>Ch. 12</label>Regression Lab II (number of pages in textbook vs. cost of textbook)</item>
+<item><label>Ch. 12</label>Regression Lab II (weights vs. fuel efficiency)</item>
+<item><label>Ch. 13</label>ANOVA Lab (fruits, vegetables, breads)</item>
+</list>
+
+Because the authors use technology heavily in the course (making many class periods a lab), <emphasis>we typically choose to do 6 labs during the quarter</emphasis>. The labs are best done in groups of 2, 3, or 4.</para><para id="element-938">There are five <emphasis>projects</emphasis> in the book. The Univariate Data project covers the ideas in chapters 1 and 2. The Continuous Distributions and Central Limit Theorem project covers idea in chatters 5, 6, and 7. The Hypothesis Testing - Article and the Hypothesis Testing - Word project covers ideas in chapters 8 and 9. The Bivariate Data, Linear Regression and Univariate project covers ideas in chapters 1, 2, and 12. Projects are done in groups of 2, 3, or 4.</para><para id="element-509">There are <emphasis>Practice Finals</emphasis> with answers and <emphasis>Data Sets</emphasis> in the text. One of the Chapter 6 Labs uses one of the data sets. Going over the Table of Contents for this collection with the students is recommended.</para><para id="element-696">We carry probabilities to 4 decimal places.</para><para id="element-916">The number of days (a "day" is a 50 minute period) based on a quarter system (10 weeks of class, 1 week of finals) it takes to cover a chapter is below. At De Anza, we are on a quarter system. In a semester, you could spend more time analyzing real data. The material is meant to be covered in one quarter or in one semester.
+<list id="eip-id8617746"><item><label>Ch. 1</label>Introduction - 2 days</item>
+
+<item><label>Ch. 2</label>Descriptive Statistics - 4 days</item>
+
+<item><label>Ch. 3</label>Probability Topics - 4 days</item>
+
+<item><label>Ch. 4</label>Discrete Random Variables - 5 days</item>
+
+<item><label>Ch. 5</label>Continuous Random Variables - 3 days</item>
+<item><label>Ch. 6</label>The Normal Distribution - 3 days</item>
+
+<item><label>Ch. 7</label>The Central Limit Theorem - 3 days</item>
+
+<item><label>Ch. 8</label>Confidence Intervals - 4 days</item>
+
+<item><label>Ch. 9</label>Hypothesis Testing - Single Mean and Single Proportion - 4 days</item>
+
+<item><label>Ch. 10</label>Hypothesis Testing - Two Means and Two Proportions - 4 days</item>
+
+<item><label>Ch. 11</label>The Chi-Square Distribution - 4 days</item>
+
+<item><label>Ch. 12</label>Linear Regression and Correlation - 4 days</item>
+
+<item><label>Ch. 13</label>Analysis of Variance and F Distribution - 3 days</item>
+
+</list></para>   
+  </content>
+  
+</document>

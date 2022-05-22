@@ -1,0 +1,1032 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Ch 11: The Chi-Square Distribution</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m17060</md:content-id>
+  <md:title>Ch 11: The Chi-Square Distribution</md:title>
+  <md:abstract>This module is the complementary teacher's guide for the "The Chi-Square Distribution" chapter of the Collaborative Statistics collection (col10522) by Barbara Illowsky and Susan Dean.</md:abstract>
+  <md:uuid>19494f12-d81c-4a85-8e04-5958a76b0cf8</md:uuid>
+</metadata>
+  <content>
+    <para id="id10488152">This chapter is concerned with three chi-square applications: goodness-of-fit; independence; and single variance. We rely on technology to do the calculations, especially for goodness-of-fit and for independence. However, the first example in the chapter (the number of absences in the days of the week) has the student calculate the chi-square statistic in steps. The same could be done for the chi-square statistic in a test of independence.</para>
+
+<para id="id10dw488152">The chi-square distribution generally is skewed to the right. There is a different chi-square curve for each df. When the df's are 90 or more, the chi-square distribution is a very good approximation to the normal. For the chi-square distribution, <m:math><m:mstyle fontsize="12pt"><m:mi>μ</m:mi></m:mstyle></m:math> = the number of df's and <m:math><m:mstyle fontsize="12pt"><m:mi>σ</m:mi></m:mstyle></m:math> = the square root of twice the number of df's.</para>
+
+<para id="id10488dq152"><title>Goodness-of-Fit Test</title>A goodness-of-fit hypothesis test is used to determine whether or not data "fit" a particular distribution.</para>
+
+<example id="id23ffszz"><para id="para10">In a past issue of the magazine <cite><cite-title>GEICO Direct</cite-title></cite>, there was an article concerning the percentage of teenage motor vehicle deaths and time of day. The following percentages were given from a sample.  </para>
+<table id="id19512686" summary="This table presents the relationship between the time of day(in the first column) and the death rate in motor vehcile accidents(second column).">
+
+<title>Time of Day Percentage of Motor Vehicle Deaths</title>
+<tgroup cols="2"><colspec colnum="1" colname="c1"/>
+        <colspec colnum="2" colname="c2"/>
+<thead>
+<row>
+<entry>Time of Day</entry>
+<entry>Death Rate</entry>
+</row>
+</thead>
+        <tbody>
+          <row>
+            <entry>12 a.m. to 3 a.m.</entry>
+            <entry>17%</entry>
+          </row>
+          <row>
+            <entry>3 a.m. to 6 a.m.</entry>
+            <entry>8%</entry>
+          </row>
+          <row>
+            <entry>6 a.m. to 9 a.m.</entry>
+            <entry>8%</entry>
+          </row>
+          <row>
+            <entry>9 a.m. to 12 noon</entry>
+            <entry>6%</entry>
+          </row>
+          <row>
+            <entry>12 noon to 3 p.m.</entry>
+            <entry>10%</entry>
+          </row>
+          <row>
+            <entry>3 p.m. to 6 p.m.</entry>
+            <entry>16%</entry>
+          </row>
+          <row>
+            <entry>6 p.m. to 9 p.m.</entry>
+            <entry>15%</entry>
+          </row>
+          <row>
+            <entry>9 p.m. to 12 a.m. </entry>
+            <entry>19%</entry>
+          </row>
+        </tbody>
+      
+</tgroup>
+</table>
+
+<para id="para1">For the purpose of this example, suppose another sample of 100 produced the same percentages.  We hypothesize that the data from this new sample fits a uniform distribution. The level of significance is 1% (<m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mi>α</m:mi>
+                    <m:mo stretchy="false">=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mtext>.</m:mtext>
+                  <m:mtext>01</m:mtext>
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{a=0 "." "01"} {}</m:annotation>
+        </m:semantics>
+      </m:math>
+    ).</para>
+<list id="list1"><item><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:msub><m:mi>H</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mi>o</m:mi></m:mrow></m:mstyle></m:msub></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{H rSub { size 8{o} } } {}</m:annotation></m:semantics></m:math>: The number of teenage motor vehicle deaths fits a uniform distribution.</item><item>
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>H</m:mi>
+                  <m:mstyle fontsize="8pt">
+                    <m:mrow>
+                      <m:mi>a</m:mi>
+                    </m:mrow>
+                  </m:mstyle>
+                </m:msub>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{H rSub { size 8{a} } } {}</m:annotation>
+        </m:semantics>
+      </m:math>
+    : The number of teenage motor vehicle deaths does not fit a uniform distribution.</item></list>
+
+<para id="element-424">The distribution for the hypothesis test is 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:msubsup><m:mi>X</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mn>7</m:mn></m:mrow></m:mstyle><m:mstyle fontsize="8pt"><m:mrow><m:mn>2</m:mn></m:mrow></m:mstyle></m:msubsup></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{X rSub { size 8{7} }  rSup { size 8{2} } } {}</m:annotation></m:semantics></m:math>
+</para>
+
+<para id="element-885">The table contains the observed percentages. For the sample of 100, the observed (O) numbers are 17, 8, 8, 6, 10, 16, 15 and 19.  The expected (E) numbers are each 12.5 for a uniform distribution (100 divided by 8 cells). The chi-square test statistic is calculated using</para><para id="element-818"><m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  <m:msub>
+                    <m:mo stretchy="false">∑</m:mo>
+                    <m:mstyle fontsize="8pt">
+                      <m:mrow>
+                        <m:mn>8</m:mn>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:msub>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mo stretchy="false">(</m:mo>
+                      <m:mrow>
+                        <m:mn>0</m:mn>
+                        <m:mo stretchy="false">−</m:mo>
+                        <m:mi>E</m:mi>
+                      </m:mrow>
+                      <m:msup>
+                        <m:mo stretchy="false">)</m:mo>
+                        <m:mstyle fontsize="8pt">
+                          <m:mrow>
+                            <m:mn>2</m:mn>
+                          </m:mrow>
+                        </m:mstyle>
+                      </m:msup>
+                    </m:mrow>
+                    <m:mi>E</m:mi>
+                  </m:mfrac>
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{ Sum rSub { size 8{8} }  { {  { \( 0 - E \)  rSup { size 8{2} } }  over  {E} } } } {}</m:annotation>
+        </m:semantics>
+      </m:math>
+    </para>
+
+<para id="element-11"><m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  <m:mrow/>
+                  <m:mo stretchy="false">=</m:mo>
+                  <m:mrow>
+                    <m:mrow>
+                      <m:mrow>
+                        <m:mrow>
+                          <m:mrow>
+                            <m:mrow>
+                              <m:mrow>
+                                <m:mfrac>
+                                  <m:mrow>
+                                    <m:mo stretchy="false">(</m:mo>
+                                    <m:mrow>
+                                      <m:mtext>17</m:mtext>
+                                      <m:mo stretchy="false">−</m:mo>
+                                      <m:mtext>12</m:mtext>
+                                    </m:mrow>
+                                    <m:mtext>.</m:mtext>
+                                    <m:mn>5</m:mn>
+                                    <m:msup>
+                                      <m:mo stretchy="false">)</m:mo>
+                                      <m:mstyle fontsize="8pt">
+                                        <m:mrow>
+                                          <m:mn>2</m:mn>
+                                        </m:mrow>
+                                      </m:mstyle>
+                                    </m:msup>
+                                  </m:mrow>
+                                  <m:mrow>
+                                    <m:mtext>12</m:mtext>
+                                    <m:mtext>.</m:mtext>
+                                    <m:mn>5</m:mn>
+                                  </m:mrow>
+                                </m:mfrac>
+                                <m:mo stretchy="false">+</m:mo>
+                                <m:mfrac>
+                                  <m:mrow>
+                                    <m:mo stretchy="false">(</m:mo>
+                                    <m:mrow>
+                                      <m:mn>8</m:mn>
+                                      <m:mo stretchy="false">−</m:mo>
+                                      <m:mtext>12</m:mtext>
+                                    </m:mrow>
+                                    <m:mtext>.</m:mtext>
+                                    <m:mn>5</m:mn>
+                                    <m:msup>
+                                      <m:mo stretchy="false">)</m:mo>
+                                      <m:mstyle fontsize="8pt">
+                                        <m:mrow>
+                                          <m:mn>2</m:mn>
+                                        </m:mrow>
+                                      </m:mstyle>
+                                    </m:msup>
+                                  </m:mrow>
+                                  <m:mrow>
+                                    <m:mtext>12</m:mtext>
+                                    <m:mtext>.</m:mtext>
+                                    <m:mn>5</m:mn>
+                                  </m:mrow>
+                                </m:mfrac>
+                              </m:mrow>
+                              <m:mo stretchy="false">+</m:mo>
+                              <m:mfrac>
+                                <m:mrow>
+                                  <m:mo stretchy="false">(</m:mo>
+                                  <m:mrow>
+                                    <m:mn>8</m:mn>
+                                    <m:mo stretchy="false">−</m:mo>
+                                    <m:mtext>12</m:mtext>
+                                  </m:mrow>
+                                  <m:mtext>.</m:mtext>
+                                  <m:mn>5</m:mn>
+                                  <m:msup>
+                                    <m:mo stretchy="false">)</m:mo>
+                                    <m:mstyle fontsize="8pt">
+                                      <m:mrow>
+                                        <m:mn>2</m:mn>
+                                      </m:mrow>
+                                    </m:mstyle>
+                                  </m:msup>
+                                </m:mrow>
+                                <m:mrow>
+                                  <m:mtext>12</m:mtext>
+                                  <m:mtext>.</m:mtext>
+                                  <m:mn>5</m:mn>
+                                </m:mrow>
+                              </m:mfrac>
+                            </m:mrow>
+                            <m:mo stretchy="false">+</m:mo>
+                            <m:mfrac>
+                              <m:mrow>
+                                <m:mo stretchy="false">(</m:mo>
+                                <m:mrow>
+                                  <m:mn>6</m:mn>
+                                  <m:mo stretchy="false">−</m:mo>
+                                  <m:mtext>12</m:mtext>
+                                </m:mrow>
+                                <m:mtext>.</m:mtext>
+                                <m:mn>5</m:mn>
+                                <m:msup>
+                                  <m:mo stretchy="false">)</m:mo>
+                                  <m:mstyle fontsize="8pt">
+                                    <m:mrow>
+                                      <m:mn>2</m:mn>
+                                    </m:mrow>
+                                  </m:mstyle>
+                                </m:msup>
+                              </m:mrow>
+                              <m:mrow>
+                                <m:mtext>12</m:mtext>
+                                <m:mtext>.</m:mtext>
+                                <m:mn>5</m:mn>
+                              </m:mrow>
+                            </m:mfrac>
+                          </m:mrow>
+                          <m:mo stretchy="false">+</m:mo>
+                          <m:mfrac>
+                            <m:mrow>
+                              <m:mo stretchy="false">(</m:mo>
+                              <m:mrow>
+                                <m:mtext>10</m:mtext>
+                                <m:mo stretchy="false">−</m:mo>
+                                <m:mtext>12</m:mtext>
+                              </m:mrow>
+                              <m:mtext>.</m:mtext>
+                              <m:mn>5</m:mn>
+                              <m:msup>
+                                <m:mo stretchy="false">)</m:mo>
+                                <m:mstyle fontsize="8pt">
+                                  <m:mrow>
+                                    <m:mn>2</m:mn>
+                                  </m:mrow>
+                                </m:mstyle>
+                              </m:msup>
+                            </m:mrow>
+                            <m:mrow>
+                              <m:mtext>12</m:mtext>
+                              <m:mtext>.</m:mtext>
+                              <m:mn>5</m:mn>
+                            </m:mrow>
+                          </m:mfrac>
+                        </m:mrow>
+                        <m:mo stretchy="false">+</m:mo>
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:mo stretchy="false">(</m:mo>
+                            <m:mrow>
+                              <m:mtext>16</m:mtext>
+                              <m:mo stretchy="false">−</m:mo>
+                              <m:mtext>12</m:mtext>
+                            </m:mrow>
+                            <m:mtext>.</m:mtext>
+                            <m:mn>5</m:mn>
+                            <m:msup>
+                              <m:mo stretchy="false">)</m:mo>
+                              <m:mstyle fontsize="8pt">
+                                <m:mrow>
+                                  <m:mn>2</m:mn>
+                                </m:mrow>
+                              </m:mstyle>
+                            </m:msup>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mtext>12</m:mtext>
+                            <m:mtext>.</m:mtext>
+                            <m:mn>5</m:mn>
+                          </m:mrow>
+                        </m:mfrac>
+                      </m:mrow>
+                      <m:mo stretchy="false">+</m:mo>
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:mo stretchy="false">(</m:mo>
+                          <m:mrow>
+                            <m:mtext>15</m:mtext>
+                            <m:mo stretchy="false">−</m:mo>
+                            <m:mtext>12</m:mtext>
+                          </m:mrow>
+                          <m:mtext>.</m:mtext>
+                          <m:mn>5</m:mn>
+                          <m:msup>
+                            <m:mo stretchy="false">)</m:mo>
+                            <m:mstyle fontsize="8pt">
+                              <m:mrow>
+                                <m:mn>2</m:mn>
+                              </m:mrow>
+                            </m:mstyle>
+                          </m:msup>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mtext>12</m:mtext>
+                          <m:mtext>.</m:mtext>
+                          <m:mn>5</m:mn>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mrow>
+                    <m:mo stretchy="false">+</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mo stretchy="false">(</m:mo>
+                        <m:mrow>
+                          <m:mtext>19</m:mtext>
+                          <m:mo stretchy="false">−</m:mo>
+                          <m:mtext>12</m:mtext>
+                        </m:mrow>
+                        <m:mtext>.</m:mtext>
+                        <m:mn>5</m:mn>
+                        <m:msup>
+                          <m:mo stretchy="false">)</m:mo>
+                          <m:mstyle fontsize="8pt">
+                            <m:mrow>
+                              <m:mn>2</m:mn>
+                            </m:mrow>
+                          </m:mstyle>
+                        </m:msup>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mtext>12</m:mtext>
+                        <m:mtext>.</m:mtext>
+                        <m:mn>5</m:mn>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mrow>
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{ {}= {  { \( "17" - "12" "." 5 \)  rSup { size 8{2} } }  over  {"12" "." 5} } + {  { \( 8 - "12" "." 5 \)  rSup { size 8{2} } }  over  {"12" "." 5} } + {  { \( 8 - "12" "." 5 \)  rSup { size 8{2} } }  over  {"12" "." 5} } + {  { \( 6 - "12" "." 5 \)  rSup { size 8{2} } }  over  {"12" "." 5} } + {  { \( "10" - "12" "." 5 \)  rSup { size 8{2} } }  over  {"12" "." 5} } + {  { \( "16" - "12" "." 5 \)  rSup { size 8{2} } }  over  {"12" "." 5} } + {  { \( "15" - "12" "." 5 \)  rSup { size 8{2} } }  over  {"12" "." 5} } + {  { \( "19" - "12" "." 5 \)  rSup { size 8{2} } }  over  {"12" "." 5} } } {}</m:annotation>
+        </m:semantics>
+      </m:math>
+    </para><para id="element-971"><m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mrow/>
+                    <m:mo stretchy="false">=</m:mo>
+                    <m:mtext>13</m:mtext>
+                  </m:mrow>
+                  <m:mtext>.</m:mtext>
+                  <m:mn>6</m:mn>
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{ {}="13" "." 6} {}</m:annotation>
+        </m:semantics>
+      </m:math>
+    </para>
+
+<para id="element-579">If you are using the TI-84 series graphing calculators, ON SOME OF THEM there is a function in STAT TESTS called 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:msup><m:mi>x</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mn>2</m:mn></m:mrow></m:mstyle></m:msup></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{x rSup { size 8{2} } } {}</m:annotation></m:semantics></m:math> GOF-Test that does the goodness-of-fit test. You first have to enter the observed numbers in one list (enter as whole numbers) and the expected numbers (uniform implies they are each 12.5) in a second list (enter 12.5 for each entry: 100 divided by 8 = 12.5). Then do the test by going to 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:msup><m:mi>x</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mn>2</m:mn></m:mrow></m:mstyle></m:msup></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{x rSup { size 8{2} } } {}</m:annotation></m:semantics></m:math> GOF-Test. </para><para id="element-200">If you are using the TI-83 series, enter the observed numbers in list1 and the expected numbers in list2 and in list3 (go to the list name), enter (list1-list2)^2/list2. Press enter. Add the values in list3 (this is the test statistic). Then go to 2nd DISTR 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:msup><m:mi>x</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mn>2</m:mn></m:mrow></m:mstyle></m:msup></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{x rSup { size 8{2} } } {}</m:annotation></m:semantics></m:math>cdf. Enter the test statistic (13.6) and the upper value of the area (10^99) and the degrees of freedom (7).</para>
+
+<para id="element-550">Probability Statement: 
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  <m:mi>P</m:mi>
+                  <m:mo stretchy="false">(</m:mo>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>x</m:mi>
+                      <m:mstyle fontsize="8pt">
+                        <m:mrow>
+                          <m:mn>2</m:mn>
+                        </m:mrow>
+                      </m:mstyle>
+                    </m:msup>
+                    <m:mo stretchy="false">&gt;</m:mo>
+                    <m:mtext>13</m:mtext>
+                  </m:mrow>
+                  <m:mtext>.</m:mtext>
+                  <m:mn>6</m:mn>
+                  <m:mrow>
+                    <m:mo stretchy="false">)</m:mo>
+                    <m:mo stretchy="false">=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mtext>.</m:mtext>
+                  <m:mtext>0588</m:mtext>
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{P \( x rSup { size 8{2} } &gt;"13" "." 6 \) =0 "." "0588"} {}</m:annotation>
+        </m:semantics>
+      </m:math>
+    </para>
+
+<para id="element-900">(Always a right-tailed test)</para>
+
+
+<figure id="id4581943"><media id="id1164977199767" alt="A skewed distribution graph with bottom right corner shaded"><image src="../../media/hump.PNG" mime-type="image/png" print-width="1.5in"/></media><caption>
+    <m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>p</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{p} {}</m:annotation></m:semantics></m:math>-value
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mrow><m:mrow/><m:mo stretchy="false">=</m:mo><m:mn>0</m:mn></m:mrow><m:mtext>.</m:mtext><m:mtext>0588</m:mtext></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ {}=0 "." "0588"} {}</m:annotation></m:semantics></m:math>
+
+</caption></figure>
+
+<para id="element-67">Since 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mi>α</m:mi><m:mo stretchy="false">&lt;</m:mo><m:mi>p</m:mi></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{a&lt;p} {}</m:annotation></m:semantics></m:math>-value
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mtext>.</m:mtext><m:mrow><m:mtext>01</m:mtext><m:mo stretchy="false">&lt;</m:mo><m:mn>0</m:mn></m:mrow><m:mtext>.</m:mtext><m:mtext>0588</m:mtext><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ \( 0 "." "01"&lt;0 "." "0588" \) } {}</m:annotation></m:semantics></m:math>, we do not reject 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:msub><m:mi>H</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mi>o</m:mi></m:mrow></m:mstyle></m:msub></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{H rSub { size 8{o} } } {}</m:annotation></m:semantics></m:math>.</para>
+
+<para id="element-580">We conclude that there is not sufficient evidence to reject the null hypothesis. It appears that the number of teenage motor vehicle deaths fits a uniform distribution. It does not matter what time of the day or night it is. Teenagers die from motor vehicle accidents equally at any time of the day or night. However, if the level of significance were 10%, we would reject the null hypothesis and conclude that the distribution of deaths does not fit a uniform distribution.</para>
+
+</example>
+
+<para id="id22421">A <emphasis>test of independence</emphasis> compares two factors to determine if they are independent (i.e. one factor does not affect the happening of a second factor). </para>
+
+<example id="id23f2ll"><para id="problemadsfadg"> The following table shows a random sample of 100 hikers and the area of hiking preferred.
+
+    <table id="id4469539" summary="The following table shows a random sample of 100 hikers and the area of hiking preferred.">
+
+<title>Hiking Preference Area</title>
+<tgroup cols="4"><colspec colnum="1" colname="header_c1"/>
+        <colspec colnum="2" colname="c2"/>
+        <colspec colnum="3" colname="c3"/>
+        <colspec colnum="4" colname="c4"/>
+        <thead>
+          <row>
+            <entry>Gender</entry>
+            <entry>The Coastline</entry>
+            <entry>Near Lakes and Streams</entry>
+            <entry>On Mountain Peaks</entry>
+          </row>
+        </thead>
+          <tbody><row>
+            <entry>Female</entry>
+            <entry>18</entry>
+            <entry>16</entry>
+            <entry>11</entry>
+          </row>
+          <row>
+            <entry>Male</entry>
+            <entry>16</entry>
+            <entry>25</entry>
+            <entry>14</entry>
+          </row>
+        </tbody>
+      
+
+
+</tgroup>
+<caption>The two factors are gender and preferred hiking area.</caption>
+</table>
+
+<list id="list3"><item><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:msub><m:mi>H</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mi>o</m:mi></m:mrow></m:mstyle></m:msub></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{H rSub { size 8{o} } } {}</m:annotation></m:semantics></m:math>: Gender and preferred hiking area are independent.</item><item>
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:msub>
+                  <m:mi>H</m:mi>
+                  <m:mstyle fontsize="8pt">
+                    <m:mrow>
+                      <m:mi>a</m:mi>
+                    </m:mrow>
+                  </m:mstyle>
+                </m:msub>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{H rSub { size 8{a} } } {}</m:annotation>
+        </m:semantics>
+      </m:math>: Gender and preferred hiking area are not independent</item></list></para>
+
+
+<para id="element-362">The distribution for the hypothesis test is 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:msubsup><m:mi>x</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mn>2</m:mn></m:mrow></m:mstyle><m:mstyle fontsize="8pt"><m:mrow><m:mn>2</m:mn></m:mrow></m:mstyle></m:msubsup></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{x rSub { size 8{2} }  rSup { size 8{2} } } {}</m:annotation></m:semantics></m:math>.</para><para id="element-558">The df's are equal to: 
+
+<m:math>
+ <m:mo>(</m:mo>
+ <m:mi>rows</m:mi>
+ <m:mo> - </m:mo>
+ <m:mn>1</m:mn>
+ <m:mo>)</m:mo>
+ <m:mo>(</m:mo>
+ <m:mi>columns</m:mi>
+ <m:mo> - </m:mo>
+ <m:mn>1</m:mn>
+ <m:mo>)</m:mo>
+ <m:mo> = </m:mo>
+ <m:mo>(</m:mo>
+ <m:mn>2</m:mn>
+ <m:mo> - </m:mo>
+ <m:mn>1</m:mn>
+ <m:mo>)</m:mo>
+ <m:mo>(</m:mo>
+ <m:mn>3</m:mn>
+ <m:mo> - </m:mo>
+ <m:mn>1</m:mn>
+ <m:mo>)</m:mo>
+ <m:mo> = </m:mo>
+ <m:mn>2</m:mn>
+</m:math></para><para id="element-276">The chi-square statistic is calculated using 
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  <m:msub>
+                    <m:mo stretchy="false">∑</m:mo>
+                    <m:mstyle fontsize="8pt">
+                      <m:mrow>
+                        <m:mrow>
+                          <m:mo stretchy="false">(</m:mo>
+                          <m:mrow>
+                            <m:mn>2</m:mn>
+                            <m:mo stretchy="false">−</m:mo>
+                            <m:mn>3</m:mn>
+                          </m:mrow>
+                          <m:mo stretchy="false">)</m:mo>
+                        </m:mrow>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:msub>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mo stretchy="false">(</m:mo>
+                      <m:mrow>
+                        <m:mn>0</m:mn>
+                        <m:mo stretchy="false">−</m:mo>
+                        <m:mi>E</m:mi>
+                      </m:mrow>
+                      <m:msup>
+                        <m:mo stretchy="false">)</m:mo>
+                        <m:mstyle fontsize="8pt">
+                          <m:mrow>
+                            <m:mn>2</m:mn>
+                          </m:mrow>
+                        </m:mstyle>
+                      </m:msup>
+                    </m:mrow>
+                    <m:mi>E</m:mi>
+                  </m:mfrac>
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{ Sum rSub { size 8{ \( 2 - 3 \) } }  { {  { \( 0 - E \)  rSup { size 8{2} } }  over  {E} } } } {}</m:annotation>
+        </m:semantics>
+      </m:math>
+    </para><para id="element-372">Each expected (E) value is calculated using 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfrac><m:mrow><m:mo stretchy="false">(</m:mo><m:mstyle fontstyle="italic"><m:mrow><m:mtext>rowtotal</m:mtext></m:mrow></m:mstyle><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">(</m:mo><m:mstyle fontstyle="italic"><m:mrow><m:mtext>columntotal</m:mtext></m:mrow></m:mstyle><m:mo stretchy="false">)</m:mo></m:mrow><m:mstyle fontstyle="italic"><m:mrow><m:mtext>totalsurveyed</m:mtext></m:mrow></m:mstyle></m:mfrac></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ {  { \(  ital "rowtotal" \)  \(  ital "columntotal" \) }  over  { ital "totalsurveyed"} } } {}</m:annotation></m:semantics></m:math></para><para id="element-939">The first expected value (female, the coastline) is 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mrow><m:mfrac><m:mrow><m:mtext>45</m:mtext><m:mo stretchy="false">⋅</m:mo><m:mtext>34</m:mtext></m:mrow><m:mtext>100</m:mtext></m:mfrac><m:mo stretchy="false">=</m:mo><m:mtext>15</m:mtext></m:mrow><m:mtext>.</m:mtext><m:mn>3</m:mn></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ {  {"45" cdot "34"}  over  {"100"} } ="15" "." 3} {}</m:annotation></m:semantics></m:math></para><para id="element-779">The expected values are: 15.3, 18.45, 11.25, 18.7, 22.55, 13.75</para><para id="element-643">The chi-square statistic is: 
+     
+    
+    </para><para id="element-176"><m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  <m:mrow>
+                    <m:msub>
+                      <m:mo stretchy="false">∑</m:mo>
+                      <m:mstyle fontsize="8pt">
+                        <m:mrow>
+                          <m:mrow>
+                            <m:mo stretchy="false">(</m:mo>
+                            <m:mrow>
+                              <m:mn>2</m:mn>
+                              <m:mo stretchy="false">−</m:mo>
+                              <m:mn>3</m:mn>
+                            </m:mrow>
+                            <m:mo stretchy="false">)</m:mo>
+                          </m:mrow>
+                        </m:mrow>
+                      </m:mstyle>
+                    </m:msub>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mo stretchy="false">(</m:mo>
+                        <m:mrow>
+                          <m:mn>0</m:mn>
+                          <m:mo stretchy="false">−</m:mo>
+                          <m:mi>E</m:mi>
+                        </m:mrow>
+                        <m:msup>
+                          <m:mo stretchy="false">)</m:mo>
+                          <m:mstyle fontsize="8pt">
+                            <m:mrow>
+                              <m:mn>2</m:mn>
+                            </m:mrow>
+                          </m:mstyle>
+                        </m:msup>
+                      </m:mrow>
+                      <m:mi>E</m:mi>
+                    </m:mfrac>
+                  </m:mrow>
+                  <m:mo stretchy="false">=</m:mo>
+                  <m:mrow/>
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{ Sum rSub { size 8{ \( 2 - 3 \) } }  { {  { \( 0 - E \)  rSup { size 8{2} } }  over  {E} } } ={}} {}</m:annotation>
+        </m:semantics>
+      </m:math>
+    </para><para id="element-149"><m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mrow>
+                      <m:mrow>
+                        <m:mrow>
+                          <m:mfrac>
+                            <m:mrow>
+                              <m:mo stretchy="false">(</m:mo>
+                              <m:mrow>
+                                <m:mtext>18</m:mtext>
+                                <m:mo stretchy="false">−</m:mo>
+                                <m:mtext>15</m:mtext>
+                              </m:mrow>
+                              <m:mtext>.</m:mtext>
+                              <m:mn>3</m:mn>
+                              <m:msup>
+                                <m:mo stretchy="false">)</m:mo>
+                                <m:mstyle fontsize="8pt">
+                                  <m:mrow>
+                                    <m:mn>2</m:mn>
+                                  </m:mrow>
+                                </m:mstyle>
+                              </m:msup>
+                            </m:mrow>
+                            <m:mrow>
+                              <m:mtext>15</m:mtext>
+                              <m:mtext>.</m:mtext>
+                              <m:mn>3</m:mn>
+                            </m:mrow>
+                          </m:mfrac>
+                          <m:mo stretchy="false">+</m:mo>
+                          <m:mfrac>
+                            <m:mrow>
+                              <m:mo stretchy="false">(</m:mo>
+                              <m:mrow>
+                                <m:mtext>16</m:mtext>
+                                <m:mo stretchy="false">−</m:mo>
+                                <m:mtext>18</m:mtext>
+                              </m:mrow>
+                              <m:mtext>.</m:mtext>
+                              <m:mtext>45</m:mtext>
+                              <m:msup>
+                                <m:mo stretchy="false">)</m:mo>
+                                <m:mstyle fontsize="8pt">
+                                  <m:mrow>
+                                    <m:mn>2</m:mn>
+                                  </m:mrow>
+                                </m:mstyle>
+                              </m:msup>
+                            </m:mrow>
+                            <m:mrow>
+                              <m:mtext>18</m:mtext>
+                              <m:mtext>.</m:mtext>
+                              <m:mtext>45</m:mtext>
+                            </m:mrow>
+                          </m:mfrac>
+                        </m:mrow>
+                        <m:mo stretchy="false">+</m:mo>
+                        <m:mfrac>
+                          <m:mrow>
+                            <m:mo stretchy="false">(</m:mo>
+                            <m:mrow>
+                              <m:mtext>11</m:mtext>
+                              <m:mo stretchy="false">−</m:mo>
+                              <m:mtext>11</m:mtext>
+                            </m:mrow>
+                            <m:mtext>.</m:mtext>
+                            <m:mtext>15</m:mtext>
+                            <m:msup>
+                              <m:mo stretchy="false">)</m:mo>
+                              <m:mstyle fontsize="8pt">
+                                <m:mrow>
+                                  <m:mn>2</m:mn>
+                                </m:mrow>
+                              </m:mstyle>
+                            </m:msup>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mtext>11</m:mtext>
+                            <m:mtext>.</m:mtext>
+                            <m:mtext>25</m:mtext>
+                          </m:mrow>
+                        </m:mfrac>
+                      </m:mrow>
+                      <m:mo stretchy="false">+</m:mo>
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:mo stretchy="false">(</m:mo>
+                          <m:mrow>
+                            <m:mtext>16</m:mtext>
+                            <m:mo stretchy="false">−</m:mo>
+                            <m:mtext>18</m:mtext>
+                          </m:mrow>
+                          <m:mtext>.</m:mtext>
+                          <m:mn>7</m:mn>
+                          <m:msup>
+                            <m:mo stretchy="false">)</m:mo>
+                            <m:mstyle fontsize="8pt">
+                              <m:mrow>
+                                <m:mn>2</m:mn>
+                              </m:mrow>
+                            </m:mstyle>
+                          </m:msup>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mtext>18</m:mtext>
+                          <m:mtext>.</m:mtext>
+                          <m:mn>7</m:mn>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mrow>
+                    <m:mo stretchy="false">+</m:mo>
+                    <m:mfrac>
+                      <m:mrow>
+                        <m:mo stretchy="false">(</m:mo>
+                        <m:mrow>
+                          <m:mtext>25</m:mtext>
+                          <m:mo stretchy="false">−</m:mo>
+                          <m:mtext>22</m:mtext>
+                        </m:mrow>
+                        <m:mtext>.</m:mtext>
+                        <m:mtext>55</m:mtext>
+                        <m:msup>
+                          <m:mo stretchy="false">)</m:mo>
+                          <m:mstyle fontsize="8pt">
+                            <m:mrow>
+                              <m:mn>2</m:mn>
+                            </m:mrow>
+                          </m:mstyle>
+                        </m:msup>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mtext>22</m:mtext>
+                        <m:mtext>.</m:mtext>
+                        <m:mtext>55</m:mtext>
+                      </m:mrow>
+                    </m:mfrac>
+                  </m:mrow>
+                  <m:mo stretchy="false">+</m:mo>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mo stretchy="false">(</m:mo>
+                      <m:mrow>
+                        <m:mtext>14</m:mtext>
+                        <m:mo stretchy="false">−</m:mo>
+                        <m:mtext>13</m:mtext>
+                      </m:mrow>
+                      <m:mtext>.</m:mtext>
+                      <m:mtext>75</m:mtext>
+                      <m:msup>
+                        <m:mo stretchy="false">)</m:mo>
+                        <m:mstyle fontsize="8pt">
+                          <m:mrow>
+                            <m:mn>2</m:mn>
+                          </m:mrow>
+                        </m:mstyle>
+                      </m:msup>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mtext>13</m:mtext>
+                      <m:mtext>.</m:mtext>
+                      <m:mtext>75</m:mtext>
+                    </m:mrow>
+                  </m:mfrac>
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{ {  { \( "18" - "15" "." 3 \)  rSup { size 8{2} } }  over  {"15" "." 3} } + {  { \( "16" - "18" "." "45" \)  rSup { size 8{2} } }  over  {"18" "." "45"} } + {  { \( "11" - "11" "." "15" \)  rSup { size 8{2} } }  over  {"11" "." "25"} } + {  { \( "16" - "18" "." 7 \)  rSup { size 8{2} } }  over  {"18" "." 7} } + {  { \( "25" - "22" "." "55" \)  rSup { size 8{2} } }  over  {"22" "." "55"} } + {  { \( "14" - "13" "." "75" \)  rSup { size 8{2} } }  over  {"13" "." "75"} } } {}</m:annotation>
+        </m:semantics>
+      </m:math>
+    </para><para id="element-563"><m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mrow/>
+                    <m:mo stretchy="false">=</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mtext>.</m:mtext>
+                  <m:mtext>47</m:mtext>
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{ {}=1 "." "47"} {}</m:annotation>
+        </m:semantics>
+      </m:math></para><para id="element-960"><title>Calculator Instructions</title> The TI-83/84 series have the function 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:msup><m:mi>x</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mn>2</m:mn></m:mrow></m:mstyle></m:msup></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{x rSup { size 8{2} } } {}</m:annotation></m:semantics></m:math>-Test in STAT TESTS to preform this test. First, you have to enter the observed values in the table into a matrix by using 2nd MATRIX and EDIT [A]. Enter the values and go to 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:msup><m:mi>x</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mn>2</m:mn></m:mrow></m:mstyle></m:msup></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{x rSup { size 8{2} } } {}</m:annotation></m:semantics></m:math>-Test. Matrix [B] is calculated automatically when you run the test.</para><para id="element-230">Probability Statement: <m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>p</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{p} {}</m:annotation></m:semantics></m:math>-value
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mrow><m:mrow/><m:mo stretchy="false">=</m:mo><m:mn>0</m:mn></m:mrow><m:mtext>.</m:mtext><m:mtext>4800</m:mtext></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ {}=0 "." "4800"} {}</m:annotation></m:semantics><m:mspace width="12pt"/></m:math>(A right-tailed test)</para><figure id="a11"><media id="id1164974359478" alt="A slightly right skewed distribution graph showing 1.47 as the mean and all values to the right shaded"><image src="../../media/hump2.PNG" mime-type="image/png" print-width="1in"/></media><caption><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>p</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{p} {}</m:annotation></m:semantics></m:math>-value
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mrow><m:mrow/><m:mo stretchy="false">=</m:mo><m:mn>0</m:mn></m:mrow><m:mtext>.</m:mtext><m:mtext>4800</m:mtext></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ {}=0 "." "4800"} {}</m:annotation></m:semantics></m:math></caption></figure><para id="element-511">Since 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>α</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{a} {}</m:annotation></m:semantics></m:math> is less than 0.05, we do not reject the null.</para><para id="element-224">There is not sufficient evidence to conclude that gender and hiking preference are not independent.</para></example>
+
+
+<para id="id222424f">Sometimes you might be interested in how something varies. A <emphasis>test of a single variance </emphasis>is the type of hypothesis test you could run in order to determine variability.</para>
+
+<example id="id1n13">
+<exercise id="exer5"><problem id="id1164984155869"><para id="para1000">A vending machine company which produces coffee vending machines claims that its machine pours an 8 ounce cup of coffee, on the average, with a standard deviation of 0.3 ounces. A college that uses the vending machines claims that the standard deviation is more than 0.3 ounces causing the coffee to spill out of a cup. The college sampled 30 cups of coffee and found that the standard deviation was 1 ounce. At the 1% level of significance, test the claim made by the vending machine company.</para></problem>
+<solution id="id6309893"><para id="para120283">
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  <m:msub>
+                    <m:mi>H</m:mi>
+                    <m:mstyle fontsize="8pt">
+                      <m:mrow>
+                        <m:mi>o</m:mi>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:msub>
+                  <m:mi>:</m:mi>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>σ</m:mi>
+                      <m:mstyle fontsize="8pt">
+                        <m:mrow>
+                          <m:mn>2</m:mn>
+                        </m:mrow>
+                      </m:mstyle>
+                    </m:msup>
+                    <m:mo stretchy="false">=</m:mo>
+                    <m:mo stretchy="false">(</m:mo>
+                  </m:mrow>
+                  <m:mn>0</m:mn>
+                  <m:mtext>.</m:mtext>
+                  <m:mn>3</m:mn>
+                  <m:msup>
+                    <m:mo stretchy="false">)</m:mo>
+                    <m:mstyle fontsize="8pt">
+                      <m:mrow>
+                        <m:mn>2</m:mn>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:msup>
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{H rSub { size 8{o} } :σ rSup { size 8{2} } = \( 0 "." 3 \)  rSup { size 8{2} } } {}</m:annotation>
+        </m:semantics>
+      </m:math>
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  <m:msub>
+                    <m:mi>H</m:mi>
+                    <m:mstyle fontsize="8pt">
+                      <m:mrow>
+                        <m:mi>a</m:mi>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:msub>
+                  <m:mi>:</m:mi>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>σ</m:mi>
+                      <m:mstyle fontsize="8pt">
+                        <m:mrow>
+                          <m:mn>2</m:mn>
+                        </m:mrow>
+                      </m:mstyle>
+                    </m:msup>
+                    <m:mo stretchy="false">&gt;</m:mo>
+                    <m:mo stretchy="false">(</m:mo>
+                  </m:mrow>
+                  <m:mn>0</m:mn>
+                  <m:mtext>.</m:mtext>
+                  <m:mn>3</m:mn>
+                  <m:msup>
+                    <m:mo stretchy="false">)</m:mo>
+                    <m:mstyle fontsize="8pt">
+                      <m:mrow>
+                        <m:mn>2</m:mn>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:msup>
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{H rSub { size 8{a} } :σ rSup { size 8{2} } &gt; \( 0 "." 3 \)  rSup { size 8{2} } } {}</m:annotation>
+        </m:semantics>
+      </m:math>
+    </para><para id="element-740">The distribution for the hypothesis test is 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:msubsup><m:mi>x</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mtext>29</m:mtext></m:mrow></m:mstyle><m:mstyle fontsize="8pt"><m:mrow><m:mn>2</m:mn></m:mrow></m:mstyle></m:msubsup></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{x rSub { size 8{"29"} }  rSup { size 8{2} } } {}</m:annotation></m:semantics></m:math> where 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mrow><m:mstyle fontstyle="italic"><m:mrow><m:mtext>df</m:mtext></m:mrow></m:mstyle><m:mo stretchy="false">=</m:mo><m:mrow><m:mtext>30</m:mtext><m:mo stretchy="false">−</m:mo><m:mn>1</m:mn></m:mrow></m:mrow><m:mo stretchy="false">=</m:mo><m:mtext>29</m:mtext></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ ital "df"="30" - 1="29"} {}</m:annotation></m:semantics></m:math>.</para><para id="element-950">The test statistic 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mrow><m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mn>2</m:mn></m:mrow></m:mstyle></m:msup><m:mo stretchy="false">=</m:mo><m:mfrac><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow><m:mi>n</m:mi><m:mo stretchy="false">−</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">⋅</m:mo><m:msup><m:mi>s</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mn>2</m:mn></m:mrow></m:mstyle></m:msup></m:mrow></m:mrow><m:msup><m:mi>σ</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mn>2</m:mn></m:mrow></m:mstyle></m:msup></m:mfrac></m:mrow><m:mo stretchy="false">=</m:mo><m:mfrac><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow><m:mtext>30</m:mtext><m:mo stretchy="false">−</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">⋅</m:mo><m:msup><m:mn>1</m:mn><m:mstyle fontsize="8pt"><m:mrow><m:mn>2</m:mn></m:mrow></m:mstyle></m:msup></m:mrow></m:mrow><m:mrow><m:mn>0</m:mn><m:mtext>.</m:mtext><m:msup><m:mn>3</m:mn><m:mstyle fontsize="8pt"><m:mrow><m:mn>2</m:mn></m:mrow></m:mstyle></m:msup></m:mrow></m:mfrac></m:mrow><m:mo stretchy="false">=</m:mo><m:mtext>322</m:mtext></m:mrow><m:mtext>.</m:mtext><m:mtext>22</m:mtext></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{x rSup { size 8{2} } = {  { \( n - 1 \)  cdot s rSup { size 8{2} } }  over  {σ rSup { size 8{2} } } } = {  { \( "30" - 1 \)  cdot 1 rSup { size 8{2} } }  over  {0 "." 3 rSup { size 8{2} } } } ="322" "." "22"} {}</m:annotation></m:semantics></m:math></para><para id="element-677">Probability Statement: 
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  <m:mi>P</m:mi>
+                  <m:mo stretchy="false">(</m:mo>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>x</m:mi>
+                      <m:mstyle fontsize="8pt">
+                        <m:mrow>
+                          <m:mn>2</m:mn>
+                        </m:mrow>
+                      </m:mstyle>
+                    </m:msup>
+                    <m:mo stretchy="false">&gt;</m:mo>
+                    <m:mtext>322</m:mtext>
+                  </m:mrow>
+                  <m:mtext>.</m:mtext>
+                  <m:mtext>22</m:mtext>
+                  <m:mrow>
+                    <m:mo stretchy="false">)</m:mo>
+                    <m:mo stretchy="false">=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{P \( x rSup { size 8{2} } &gt;"322" "." "22" \) =0} {}</m:annotation>
+        </m:semantics>
+      </m:math>
+    </para><figure id="fig1"><media id="id1164982665084" alt="A distribution graph with what appears to be a asymptote near the horizontal axis"><image src="../../media/hump3.PNG" mime-type="image/png" print-width="2in"/></media><caption><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>p</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{p} {}</m:annotation></m:semantics></m:math>-value
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mrow/><m:mo stretchy="false">=</m:mo><m:mn>0</m:mn></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ {}=0} {}</m:annotation></m:semantics></m:math></caption></figure><para id="element-801">Since 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mi>a</m:mi><m:mo stretchy="false">&gt;</m:mo><m:mi>p</m:mi></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{a&gt;p} {}</m:annotation></m:semantics></m:math>-value 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mtext>.</m:mtext><m:mrow><m:mtext>01</m:mtext><m:mo stretchy="false">&gt;</m:mo><m:mn>0</m:mn></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ \( 0 "." "01"&gt;0 \) } {}</m:annotation></m:semantics></m:math>, reject 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:msub><m:mi>H</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mi>o</m:mi></m:mrow></m:mstyle></m:msub></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{H rSub { size 8{o} } } {}</m:annotation></m:semantics></m:math>.</para><para id="element-573">There is sufficient evidence to conclude that the standard deviation is more than 0.3 ounces of coffee. The vending machine company needs to adjust their machines to prevent spillage.</para></solution></exercise></example>
+
+<para id="id3034mf"><title>Assign Practice</title>Have the students do the <link document="m17054">Practice 1</link>, <link document="m17056">Practice 2</link>, and <link document="m17053">Practice 3</link> in class collaboratively.</para>
+
+<para id="id22ofg"><title>Assign Homework</title>Assign <link document="m17028">Homework </link>. Suggested homework: 3, 5, 7 (GOF), 9, 13, 15 (Test of Indep.), 17, 19, 23 (Variance), 24 - 37 (General)</para>
+    
+
+    
+  </content>
+</document>

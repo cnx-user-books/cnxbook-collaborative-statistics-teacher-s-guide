@@ -1,0 +1,149 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Normal Distribution: Teacher's Guide</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>228deca0-5532-488c-8422-5878022132d6</md:uuid>
+</metadata>
+  <content>
+    <para id="id11657487">A fair number of students are familiar with the "bell-shaped" curve. Stress that the normal is a continuous distribution like the uniform and exponential. However, the left and right tails extend indefinitely but come infinitely close to the 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>x</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{x} {}</m:annotation></m:semantics></m:math>-axis. It is not necessary to show the probability distribution function for the normal (it is in the book) because there are normal probability tables and technology available for probability and percentile calculations.</para>
+
+<para id="id113657487"><title>Visualize the Data</title>Draw a picture of the normal graph and explain that it is symmetrical about the mean. The shape of the graph depends on the standard deviation. The smaller the standard deviation, the skinnier and taller the graph. A change in the mean shifts the graph to the right or left. The notation for the normal is 
+<m:math><m:mi>X</m:mi><m:mtext>~</m:mtext><m:mi>N</m:mi><m:mo stretchy="false">(</m:mo><m:mi>μ</m:mi><m:mi>,</m:mi><m:mi>σ</m:mi><m:mo stretchy="false">)</m:mo></m:math>. Draw several normal curves (superimposed upon each other). Have students determine how the means and standard deviations are changing.</para>
+<para id="idfr203">
+<figure id="idp7240864"><media id="idp9236976" alt="Normal distributions curve that is vertically steep, about twice as high as it is wide"><image src="../../media/curve.PNG" mime-type="image/png" print-width="2in"/></media></figure>
+<figure id="idp7059456"><media id="idp7009952" alt="Normal distributions curve that is horizontally wide, about twice as wide as it is tall"><image src="../../media/curve1.PNG" mime-type="image/png" print-width="2in"/></media></figure>
+</para>
+
+<para id="id1163557487"><title>The Normal Distribution Notation</title>The standard normal distribution is of special interest. <emphasis>Notation: </emphasis>
+<m:math><m:mi>Z</m:mi><m:mtext>~</m:mtext><m:mi>N</m:mi><m:mo stretchy="false">(</m:mo><m:mn>0,1</m:mn><m:mo stretchy="false">)</m:mo></m:math> where 
+<m:math><m:mi>Z</m:mi></m:math> = one z-score (the number of standard deviations a value is to the right or left of the mean). The mean is 0 and the variance (and standard deviation) is 1. Any normal distribution can be standardized to the standard normal by the z-score formula: <m:math>
+                
+                  <m:mi>z</m:mi>
+                  <m:mo stretchy="false">=</m:mo>
+                  <m:mfrac>
+                    <m:mrow>
+                          <m:mtext>value</m:mtext>
+                      <m:mo stretchy="false">−</m:mo>
+                      <m:mi>μ</m:mi>
+                    </m:mrow>
+                    <m:mi>σ</m:mi>
+                  </m:mfrac>
+               
+      </m:math>. 
+Do an example showing the standardization. For 
+<m:math><m:mi>X</m:mi><m:mtext>~</m:mtext><m:mi>N</m:mi><m:mo stretchy="false">(</m:mo><m:mn>3,2</m:mn><m:mo stretchy="false">)</m:mo></m:math> and 
+<m:math><m:mi>Y</m:mi><m:mtext>~</m:mtext><m:mi>N</m:mi><m:mo stretchy="false">(</m:mo><m:mn>5,6</m:mn><m:mo stretchy="false">)</m:mo></m:math>, the values 
+<m:math><m:mi>x</m:mi><m:mo stretchy="false">=</m:mo><m:mn>4</m:mn></m:math> and 
+<m:math><m:mi>y</m:mi><m:mo stretchy="false">=</m:mo><m:mn>8</m:mn></m:math> are each 
+<m:math><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:math> standard deviation to the right (
+<m:math><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mi>σ</m:mi></m:math>) of their respective means. Therefore, they both have a z-score of 
+<m:math><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:math>.</para>
+
+<example id="id1165dd7487">
+
+<para id="id116572d487">Do an example using the normal distribution and the standardization. </para>
+<exercise id="exer1"><problem id="idm7596128"><para id="problem1">Several studies have shown that the amount of time people stand in line waiting for a bank teller is normally distributed. Suppose the mean waiting time is 3 minutes and the standard deviation is 1.5 minutes. Let <m:math><m:mi>X</m:mi></m:math> = the amount of time, in minutes, one person stands in line waiting for a teller. Notation: <m:math><m:mi>X</m:mi><m:mtext>~</m:mtext><m:mi>N</m:mi><m:mo stretchy="false">(</m:mo><m:mn>3,1.5</m:mn><m:mo stretchy="false">)</m:mo></m:math></para>
+
+
+<para id="huzzah">Find the probability that one person waits in line for a teller less than 2 minutes. Have students draw the picture and write a probability statement. The picture should have the 
+<m:math><m:mi>x</m:mi></m:math>-axis.</para></problem>
+<solution id="idp4649504">
+
+<figure id="idp1912384"><media id="idp11042256" alt="Distribution curve with left third of the curve shaded"><image src="../../media/curve2.PNG" mime-type="image/png" print-width="2in"/></media>
+
+
+    <caption>
+Probability statement: 
+      <m:math>
+                  <m:mi>P</m:mi>
+                  <m:mo stretchy="false">(</m:mo>
+                    <m:mi>X</m:mi>
+                    <m:mo stretchy="false">&lt;</m:mo>
+                    <m:mn>2</m:mn>
+                    <m:mo stretchy="false">)</m:mo>
+                    <m:mo stretchy="false">=</m:mo>
+                    <m:mn>0.2500</m:mn>
+      </m:math>. If you use the TI-83/84 series, the function <code>normalcdf(0, 2, 3, 1.5)</code> in 2nd DISTR. 
+      <m:math>
+                    <m:mi>k</m:mi>
+                    <m:mo stretchy="false">=</m:mo>
+                    <m:mn>5.47</m:mn>
+      </m:math>
+    </caption></figure>
+<figure id="idp3109072"><media id="idp10167280" alt="Distribution curve with 0.95 as the mean"><image src="../../media/curve3.PNG" mime-type="image/png" print-width="2in"/></media><caption>
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  <m:mi>P</m:mi>
+                  <m:mo stretchy="false">(</m:mo>
+                  <m:mrow>
+                    <m:mi>X</m:mi>
+                    <m:mo stretchy="false">&lt;</m:mo>
+                    <m:mi>k</m:mi>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mo stretchy="false">)</m:mo>
+                    <m:mo stretchy="false">=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mtext>.</m:mtext>
+                  <m:mtext>95</m:mtext>
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{P \( X&lt;k \) =0 "." "95"} {}</m:annotation>
+        </m:semantics>
+      </m:math>.
+    If you use the TI83/84 series of articles, use the function 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mstyle fontstyle="italic"><m:mrow><m:mtext>InvNorm</m:mtext></m:mrow></m:mstyle><m:mo stretchy="false">(</m:mo><m:mtext>.</m:mtext><m:mtext>95</m:mtext><m:mi>,</m:mi><m:mn>3,1</m:mn><m:mtext>.</m:mtext><m:mn>5</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ ital "InvNorm" \(  "." "95",3,1 "." 5 \) } {}</m:annotation></m:semantics></m:math>.
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mi>k</m:mi>
+                    <m:mo stretchy="false">=</m:mo>
+                    <m:mn>5</m:mn>
+                  </m:mrow>
+                  <m:mtext>.</m:mtext>
+                  <m:mtext>47</m:mtext>
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{k=5 "." "47"} {}</m:annotation>
+        </m:semantics>
+      </m:math>
+    </caption></figure></solution></exercise>
+</example>
+
+<note id="idp3279344">The <emphasis>normal approximation to the binomial is NOT included</emphasis> in this text. With graphics calculators and computer software, it is easy to draw a binomial graph with a small 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>n</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{n} {}</m:annotation></m:semantics></m:math> and then make 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>n</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{n} {}</m:annotation></m:semantics></m:math>, say, 50. Students will see the graph approach the normal. The normal approximation states that if 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>X</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{X} {}</m:annotation></m:semantics></m:math> follows a binomial distribution with number of trials equal to 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>n</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{n} {}</m:annotation></m:semantics></m:math> and probability of success for any trial equal to 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mi>p</m:mi><m:mo stretchy="false">(</m:mo><m:mi>X</m:mi><m:mtext>~</m:mtext><m:mi>B</m:mi><m:mo stretchy="false">(</m:mo><m:mi>n</m:mi><m:mi>,</m:mi><m:mi>p</m:mi><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{p \( X "~" B \( n,p \)  \) } {}</m:annotation></m:semantics></m:math>, then by adding 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mrow><m:mo stretchy="false">±</m:mo><m:mn>0</m:mn></m:mrow><m:mtext>.</m:mtext><m:mn>5</m:mn></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ +- 0 "." 5} {}</m:annotation></m:semantics></m:math> to 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>X</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{X} {}</m:annotation></m:semantics></m:math>, you get a new random variable 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>Y</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{Y} {}</m:annotation></m:semantics></m:math> (
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>Y</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{Y} {}</m:annotation></m:semantics></m:math> is either 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mrow><m:mi>X</m:mi><m:mo stretchy="false">+</m:mo><m:mn>0</m:mn></m:mrow><m:mtext>.</m:mtext><m:mn>5</m:mn></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{X+0 "." 5} {}</m:annotation></m:semantics></m:math>or 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mrow><m:mi>X</m:mi><m:mo stretchy="false">−</m:mo><m:mn>0</m:mn></m:mrow><m:mtext>.</m:mtext><m:mn>5</m:mn></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{X - 0 "." 5} {}</m:annotation></m:semantics></m:math>) and 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>Y</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{Y} {}</m:annotation></m:semantics></m:math> follows a normal distribution 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>Y</m:mi><m:mtext>~</m:mtext><m:mi>N</m:mi><m:mo stretchy="false">(</m:mo><m:mstyle fontstyle="italic"><m:mrow><m:mtext>np</m:mtext></m:mrow></m:mstyle><m:mi>,</m:mi><m:mstyle fontstyle="italic"><m:mrow><m:mtext>npq</m:mtext></m:mrow></m:mstyle><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ \( Y "~" N \(  ital "np", ital "npq" \)  \) } {}</m:annotation></m:semantics></m:math>. For the approximation to be a good one, you want 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mstyle fontstyle="italic"><m:mrow><m:mtext>np</m:mtext></m:mrow></m:mstyle><m:mo stretchy="false">&gt;</m:mo><m:mn>5</m:mn></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ ital "np"&gt;5} {}</m:annotation></m:semantics></m:math>, 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mstyle fontstyle="italic"><m:mrow><m:mtext>nq</m:mtext></m:mrow></m:mstyle><m:mo stretchy="false">&gt;</m:mo><m:mn>5</m:mn></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ ital "nq"&gt;5} {}</m:annotation></m:semantics></m:math>, and 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mi>n</m:mi><m:mo stretchy="false">&gt;</m:mo><m:mtext>20</m:mtext></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{n&gt;"20"} {}</m:annotation></m:semantics></m:math>.</note>
+
+<para id="id1165742487"><title>Assign Practice</title>Assign the <link document="m16983">Practice</link> in class to be done in groups.</para>
+<para id="id116574ca87"><title>Assign Homework</title>Assign <link document="m16978">Homework</link>. Suggested problems: 1 - 11 odds, 8, 10, 12 - 19.</para>
+
+</content>
+</document>

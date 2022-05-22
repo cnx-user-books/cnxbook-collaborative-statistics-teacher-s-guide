@@ -1,0 +1,34 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Sampling and Data: Teacher's Guide</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>7f7ea6b4-2071-48f5-b0e0-234fd6c66522</md:uuid>
+</metadata>
+  <content>
+
+
+
+      <para id="id23553">Explain the terms statistics and probability.</para>
+      <para id="id24243f2">Introduce the key terms by an example.</para>
+      <example id="id232f2ff23">
+        <para id="id2234fnnb"> Students may be interested in the average time (in years) it will take them to earn a B.A. or B.S. Differentiate between population and sample.
+      </para></example>
+      <para id="id224c21">Explain data. The book discusses qualitative and quantitative data. Quantitative data is either discrete (countable) or continuous (measurable).
+      <list id="guide_1b" list-type="bulleted"><title>Types of Data</title><item><emphasis>Qualitative data</emphasis> - the city or town a student lives in.</item>
+      <item><emphasis>Quantitative discrete (countable) data</emphasis> - the number of T-shirts a student owns.</item>
+      <item><emphasis>Quantitative continuous (measurable) data</emphasis> - the amount of time (in hours) a student studies statistics each day.</item></list></para>
+
+      <para id="id4fj433"><title>Sampling</title>Discuss what a sample is. Stress the importance of sampling randomly and the fact that two random samples from the same population may be different. Doing the two experiments with a fair die (roll the same die 20 times for each experiment and record the frequencies of the faces in the book) will help them understand how samples vary. Using your class as the population, sample 10 men and 10 women. Let the sample be the number of pairs of shoes each student owns. This example illustrates samples which are <emphasis>not</emphasis> representative from the same population.</para>
+
+
+      <para id="id23df22">Discuss how to sample data. Though there are numerous ways, the book discusses simple random, stratified, cluster, systematic, and convenience. You may want to discuss other ways of sampling.</para>
+
+      <para id="id232fmsf"><title>Frequency</title>The last part of the chapter discusses frequency, relative frequency, and cumulative relative frequency. The students should understand how to read the table in the example (heights, to the nearest inch, of male students at ABC College).</para>
+
+      <para id="sfsf1"><title>Assign Practice</title>Take some class time and have the students work in groups and complete the <link document="m16016">Practice</link>.</para>
+      <para id="id2324"><title>Assign Homework</title>Assign <link document="m16010">Homework</link> problems: 1 - 17 odds, 19 - 27.</para>
+    
+
+
+
+
+  </content>
+</document>

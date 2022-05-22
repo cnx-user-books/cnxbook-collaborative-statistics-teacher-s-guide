@@ -1,0 +1,56 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Central Limit Theorem: Teacher's Guide</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>9b7b9236-e26a-42e6-a913-770be8d69e54</md:uuid>
+</metadata>
+  <content>
+    <para id="element-1">The Central Limit Theorem (CLT) is considered to be one of the most powerful theorems in all of statistics and probability. It states that if you draw samples of size <m:math><m:mi>n</m:mi></m:math> and average (or sum) them, you will get a distribution of averages (or sums) that follow a normal distribution.</para><example id="element-398"><para id="element-219">
+   Suppose <m:math><m:mi>μ</m:mi></m:math> and <m:math><m:mi>σ</m:mi></m:math> are the original mean and standard deviation of the population from which each sample of size <m:math><m:mi>n</m:mi></m:math> is drawn. Let <m:math><m:mover><m:mi>X</m:mi><m:mo>-</m:mo></m:mover></m:math>= the random variable for the average of <m:math><m:mi>n</m:mi></m:math> samples. Let <m:math><m:mi>∑</m:mi><m:mi>x</m:mi></m:math> = the random variable for the number of <m:math><m:mi>n</m:mi></m:math> samples
+</para><para id="element-234"><m:math><m:mi>X</m:mi><m:mo>~</m:mo><m:mi>N</m:mi><m:mo>(</m:mo><m:mi>μ</m:mi><m:mo>, </m:mo><m:mfrac><m:mi>σ</m:mi><m:mrow><m:msqrt><m:mi>n</m:mi></m:msqrt></m:mrow></m:mfrac> <m:mo>)</m:mo></m:math></para><para id="element-160"><m:math><m:msup><m:mi>Σ</m:mi><m:mi>x</m:mi></m:msup><m:mo>~</m:mo><m:mi>N</m:mi>
+<m:mo>(</m:mo><m:mi>n</m:mi><m:mi>μ</m:mi><m:mo>,</m:mo><m:mi>n</m:mi>
+<m:mi>σ</m:mi><m:mo>)</m:mo></m:math></para></example><para id="element-161"><title>The Dice Experiment</title>At the beginning of the chapter, there is a dice experiment. Together with the students, do the experiment. The example consists of rolling 10 times each, 1 die, 2 dice, 5 dice, and 10 dice and averaging the faces. Draw graphs (histograms are OK). This experiment, most of the time, shows that, as the number of dice increase, the graph looks more and more bell-shaped. Because the samples taken are usually small, you will not necessarily get a perfect bell-shaped curve. However, the students should get the idea.</para><example id="element-299"><para id="element-327"><title>Calculate Averages</title>It can be shown that the average amount of money one person spends on one trip to a particular supermarket is $51. The averages follow an exponential distribution.
+</para><exercise id="element-74"><problem id="idm8762224">
+  <para id="element-153">
+Find the probability that the average of 40 samples is more than $60.
+  </para>
+</problem>
+
+<solution id="idm5811744">
+  <para id="element-736">Let <m:math><m:mover><m:mi>X</m:mi><m:mi>-</m:mi></m:mover></m:math>= the average amount of money that 40 people spend. Have the students draw the appropriate picture, labeling the x-axis with <m:math><m:mover><m:mi>X</m:mi><m:mi>-</m:mi></m:mover></m:math>. The mean <m:math><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>51</m:mn></m:math> and the standard deviation <m:math><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>51</m:mn></m:math>. If you are using the TI-83/84 series, use the function <code>normalcdf(60, 10^99, 51, 51/40)</code>.</para><para id="element-995">The 75th percentile for the average amount spent by 40 people at the supermarket is $56.44. This means that 75% of the people spend no more than $56.44 and 25% spend no less than that amount.</para><para id="element-133">This can be calculated by using the TI-83/84 function <code>InvNorm(.75, 51, 51/ 40)</code>.</para>
+</solution>
+</exercise>
+</example><para id="element-68"><title>Calculate Sums</title>You can also do examples for sums. We, the authors, do not do sums because of time (we are on a quarter system). Help the students to find the probability that the total (sum) amount of money spent by 10 people at the supermarket is less than $500. Also, help them do a percentile problem.</para><para id="element-948"><title>Z-score Formulas</title>If you want to teach the z-score formulas for averages and sums, they are:
+<list id="zforms" list-type="bulleted"><item><m:math><m:mi>z</m:mi><m:mo> = </m:mo><m:mfrac><m:mrow><m:mtext>value</m:mtext><m:mo>-</m:mo><m:mi>μ</m:mi></m:mrow>
+<m:mrow><m:mo>(</m:mo><m:mfrac><m:mrow><m:mo>-</m:mo><m:mi>σ</m:mi></m:mrow>
+<m:msqrt><m:mi>n</m:mi></m:msqrt></m:mfrac><m:mo>)</m:mo>
+</m:mrow></m:mfrac></m:math></item>
+
+
+
+   <item> <m:math><m:mi>z</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mtext>value</m:mtext>
+<m:mo>-</m:mo><m:mi>n</m:mi><m:mo>⋅</m:mo><m:mi>μ</m:mi></m:mrow>
+<m:mrow><m:msqrt><m:mi>n</m:mi></m:msqrt><m:mo>⋅</m:mo><m:mi>σ</m:mi></m:mrow></m:mfrac></m:math> </item>
+
+</list>
+</para>
+<para id="element-968"><title>Assign Practice</title>Assign the <link document="m16954">Practice</link> in class to be done in groups.</para><para id="element-539"><title>Assign Homework</title>Assign <link document="m16952">Homework</link>. Suggested homework: (averages) 1a - f, 3, 5, 9, 10, 11a - d, f, k, 13a-c,g-j, 16, 17, 19 - 23</para>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </content>
+</document>

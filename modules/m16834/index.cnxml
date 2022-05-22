@@ -1,0 +1,258 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Ch. 4: Discrete Random Variables</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m16834</md:content-id>
+  <md:title>Ch. 4: Discrete Random Variables</md:title>
+  <md:abstract>This module is the complementary teacher's guide for the "Discrete Random Variables" chapter of the Collaborative Statistics collection (col10522) by Barbara Illowsky and Susan Dean.</md:abstract>
+  <md:uuid>1a06590f-6930-4be4-a209-fc21bc363091</md:uuid>
+</metadata>
+<featured-links>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit below.
+       Changes to the links section in the source will not be saved. -->
+    <link-group type="supplemental">
+      <link url="http://cnx.org/content/m16825/latest/" strength="3">View this Chapter from the Collaborative Statistics Textbook Online.</link>
+    </link-group>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit above.
+       Changes to the links section in the source will not be saved. -->
+</featured-links>
+<content>
+    <para id="element-940">This chapter introduces <emphasis>expected value</emphasis> (long term average) and four of the <emphasis>common discrete random variables</emphasis> (binomial, geometric, hypergeometric, and Poisson). The authors cover expected value and two of the discrete random variables (binomial and Poisson). Depending on your background, you may want to cover the binomial (usually required) together with none or some of the other discrete random variables</para><para id="element-120"><title>Random Variables</title>Explain <emphasis>random variable</emphasis> (assigns numerical values to the outcomes of a statistical experiment). Upper case letters denote random variables. Example: Let
+<m:math><m:mi>X</m:mi></m:math> = the number of cars in your household. (The phrase "the number of" tells you that
+<m:math><m:mi>X</m:mi></m:math> takes on discrete values.) 
+<m:math><m:mi>X</m:mi></m:math> takes on the values 0, 1, 2, 3, ...</para><para id="element-367"><title>The Probability Distribution Function</title>A <emphasis>probability distribution function (pdf)</emphasis> is best shown with an example: A controversial drug is given to two patients. Let X = the number of patients cured.
+  <list id="list234328"><item> 
+<m:math><m:mi>P</m:mi><m:mtext>(a cure)</m:mtext><m:mo>=</m:mo><m:mfrac><m:mn>5</m:mn><m:mn>6</m:mn></m:mfrac></m:math></item>
+
+<item><m:math><m:mi>P</m:mi><m:mtext>(no cure)</m:mtext><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>6</m:mn></m:mfrac></m:math></item></list></para><para id="element-948">A pdf is easiest to understand in a table.</para><table id="element-171" summary="This table show the number of patients to be cured in the first column and the resulting probability of curing that number of patients in the second column.">
+<tgroup cols="2"><colspec colnum="1" colname="header_c1"/>
+        <colspec colnum="2" colname="c2"/>
+        <thead>
+          <row>
+            <entry>
+              <m:math>
+                        <m:mi>X</m:mi>
+              </m:math>
+            </entry>
+            <entry><m:math><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>X</m:mi><m:mo stretchy="false">)</m:mo></m:math> or 
+<m:math><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>X</m:mi><m:mo stretchy="false">=</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:math></entry>
+          </row>
+</thead>
+<tbody>
+          <row>
+            <entry>0</entry>
+            <entry>
+              <m:math>
+                          <m:mi>P</m:mi>
+                          <m:mo stretchy="false">(</m:mo>
+                          <m:mi>X</m:mi>
+                              
+                              <m:mo stretchy="false">=</m:mo>
+                              <m:mn>0</m:mn><m:mo stretchy="false">)</m:mo>
+
+                            <m:mo stretchy="false">=</m:mo>
+                            <m:mo>(</m:mo>
+                          <m:mfrac>
+                                <m:mn>1</m:mn>
+                                <m:mn>6</m:mn>
+                          </m:mfrac>
+                          <m:mo>)</m:mo>
+                          <m:mo>(</m:mo>
+                          <m:mfrac>
+                                <m:mn>1</m:mn>
+                                <m:mn>6</m:mn>
+                          </m:mfrac>
+                            <m:mo>)</m:mo>
+                            <m:mo stretchy="false">=</m:mo>
+                            <m:mo>(</m:mo>
+                          <m:mfrac>
+                                <m:mn>1</m:mn>
+                                <m:mn>36</m:mn>
+                          </m:mfrac>
+                          <m:mo>)</m:mo>
+              </m:math>
+            </entry>
+          </row>
+          <row>
+            <entry>1</entry>
+            <entry>
+              <m:math>
+                          <m:mi>P</m:mi>
+                          <m:mo stretchy="false">(</m:mo>
+                          <m:mi>X</m:mi>
+                              
+                              <m:mo stretchy="false">=</m:mo>
+                              <m:mn>1</m:mn><m:mo stretchy="false">)</m:mo>
+
+                            <m:mo stretchy="false">=</m:mo>
+                            <m:mo>2</m:mo>
+                            <m:mo>(</m:mo>
+                          <m:mfrac>
+                                <m:mn>1</m:mn>
+                                <m:mn>6</m:mn>
+                          </m:mfrac>
+                          <m:mo>)</m:mo>
+                          <m:mo>(</m:mo>
+                          <m:mfrac>
+                                <m:mn>5</m:mn>
+                                <m:mn>6</m:mn>
+                          </m:mfrac>
+                            <m:mo>)</m:mo>
+                            <m:mo stretchy="false">=</m:mo>
+                            <m:mo>(</m:mo>
+                          <m:mfrac>
+                                <m:mn>10</m:mn>
+                                <m:mn>36</m:mn>
+                          </m:mfrac>
+                          <m:mo>)</m:mo>
+              </m:math>
+            </entry>
+          </row>
+          <row>
+            <entry>2</entry>
+            <entry>
+              <m:math>
+                          <m:mi>P</m:mi>
+                          <m:mo stretchy="false">(</m:mo>
+                          <m:mi>X</m:mi>
+                              
+                              <m:mo stretchy="false">=</m:mo>
+                              <m:mn>2</m:mn><m:mo stretchy="false">)</m:mo>
+
+                            <m:mo stretchy="false">=</m:mo>
+                            <m:mo>(</m:mo>
+                          <m:mfrac>
+                                <m:mn>5</m:mn>
+                                <m:mn>6</m:mn>
+                          </m:mfrac>
+                          <m:mo>)</m:mo>
+                          <m:mo stretchy="false">(</m:mo>
+                          <m:mfrac>
+                                <m:mn>5</m:mn>
+                                <m:mn>6</m:mn>
+                          </m:mfrac>
+                            <m:mo>)</m:mo>
+                            <m:mo stretchy="false">=</m:mo>
+                            <m:mo>(</m:mo>
+                          <m:mfrac>
+                                <m:mn>25</m:mn>
+                                <m:mn>36</m:mn>
+                          </m:mfrac>
+                          <m:mo>)</m:mo>
+              </m:math>
+            </entry>
+          </row>
+        </tbody>
+      
+
+
+
+
+
+
+
+
+
+</tgroup><caption>Each probability is between 0 and 1. </caption>
+</table><para id="element-25">The previous example can be used as an example of <emphasis>expected value</emphasis> or long term average (
+<m:math><m:mi>μ</m:mi></m:math>). Make a third column labeled
+<m:math><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">(</m:mo><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo></m:math>. Calculate the three values and add them. The result, 
+<m:math><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>(</m:mo>
+<m:mfrac>
+  <m:mn>1</m:mn>
+  <m:mn>36</m:mn>
+</m:mfrac>
+<m:mo>)</m:mo><m:mo stretchy="false">+</m:mo><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo><m:mo>(</m:mo><m:mfrac><m:mn>10</m:mn><m:mn>36</m:mn></m:mfrac><m:mo>)</m:mo><m:mo stretchy="false">+</m:mo><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo><m:mo>(</m:mo><m:mfrac><m:mn>25</m:mn><m:mn>36</m:mn></m:mfrac><m:mo>)</m:mo><m:mo stretchy="false">=</m:mo><m:mfrac><m:mn>60</m:mn><m:mn>36</m:mn></m:mfrac><m:mo stretchy="false">=</m:mo><m:mn>1.67</m:mn></m:math>, is the expected number of patients who are cured if the drug is administered many times to two patients.</para><para id="element-284">The binomial is a special discrete pdf or <emphasis>pattern</emphasis>. A binomial experiment consists of counting the number of successes in one or more Bernoulli trials. (A Bernoulli trial has only two possible outcomes, success or failure. In every Bernoulli trial, the probability of a success (or failure) remains the same.)</para><example id="element-623"><exercise id="ert">
+<problem id="id39333442"><para id="problem12">John comes to his stat class and discovers he must take a true-false quiz . There are 20 questions on the quiz. John has not attended class recently and must guess randomly at the questions. Let 
+<m:math><m:mi>X</m:mi></m:math> = the number of questions John answers correctly out of 20 questions. 
+<m:math><m:mi>X</m:mi></m:math> takes on the values 0, 1, 2, 3, ..., 20. 
+<m:math><m:mi>P</m:mi><m:mo>(</m:mo><m:mtext>correct answer: a success</m:mtext><m:mo>)</m:mo></m:math>
+<m:math><m:mo stretchy="false">=</m:mo><m:mn>0.5</m:mn></m:math>. John's guessing at the answers is a binomial experiment. </para>
+    <para id="problem1_22">Notation: 
+<m:math><m:mi>X</m:mi></m:math> ~ 
+<m:math><m:mi>B</m:mi><m:mo stretchy="false">(</m:mo><m:mn>20</m:mn><m:mi>,</m:mi><m:mn>0.5</m:mn><m:mo stretchy="false">)</m:mo></m:math> where the number of trials, <m:math><m:mi>n</m:mi></m:math>
+    , is 20 and the probability of a success, 
+<m:math><m:mi>p</m:mi></m:math>, on any trial is 0.5.</para> 
+    <para id="problem1_32">Students can find the mean (<m:math><m:mi>μ</m:mi>
+                  <m:mo stretchy="false">=</m:mo>
+                      <m:mi>np</m:mi></m:math>
+    ), and the standard deviation (<m:math><m:mi>σ</m:mi><m:mo stretchy="false">=</m:mo></m:math> square root of
+
+
+<m:math><m:mi>npq</m:mi></m:math>) either by hand or with technology. (
+<m:math><m:mi>q</m:mi></m:math> is the probability of a failure.) Have students help you fill in the blanks and answer the questions:<list id="list32" list-type="enumerated"><item><m:math><m:mi>σ</m:mi><m:mo>=</m:mo></m:math> </item>
+<item> Draw the graph. (horizontal axis is the number of successes; vertical is the probability of 0 successes, 1 success, 2 successes, ..., 20 successes. Draw vertical lines or boxes.</item>
+
+<item> <list id="list123542342"><item>What is the probability that John gets 15 questions correct? 
+<m:math><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>X</m:mi><m:mo stretchy="false">=</m:mo><m:mn>15</m:mn><m:mo stretchy="false">)</m:mo></m:math> </item><item>More than 15 questions correct? 
+<m:math><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>X</m:mi><m:mo stretchy="false">&gt;</m:mo><m:mn>15</m:mn><m:mo stretchy="false">)</m:mo></m:math></item><item> At least 15 questions correct? 
+<m:math><m:mo>(</m:mo><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>X</m:mi><m:mo stretchy="false">=</m:mo><m:mn>15</m:mn><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>X</m:mi><m:mo stretchy="false">&gt;</m:mo><m:mn>15</m:mn><m:mo stretchy="false">)</m:mo><m:mo>)</m:mo></m:math>
+</item></list></item></list></para></problem>
+</exercise></example><para id="element-214">A <emphasis>geometric </emphasis> experiment takes place when at least one Bernoulli trial is performed and all are failures except the last one which is the only success. Example: Liz likes to play darts. The probability that she hits the bull's eye (success) on any throw is 85%. (Liz is good!) Liz throws darts at the bull's eye <emphasis>until</emphasis> she hits it. Let <m:math><m:mi>X</m:mi></m:math> = the number of times Liz throws the dart at the bull's eye until she hits it. Have students help you fill in the blanks:</para><list id="element-808" list-type="bulleted"><title>Fill in the blanks.</title><item>
+<m:math><m:mi>X</m:mi></m:math>~ _______ (
+<m:math><m:mi>X</m:mi></m:math> ~ 
+<m:math><m:mi>G</m:mi><m:mo stretchy="false">(</m:mo><m:mi>p</m:mi><m:mo stretchy="false">)</m:mo></m:math> where 
+<m:math><m:mi>p</m:mi><m:mo stretchy="false">=</m:mo></m:math> probability of a success= 0.85)</item>
+
+<item> Draw the graph. (Number of throws until the first success versus probability)</item>
+
+<item>4. What is the probability that Liz hits the bull's eye for the first time on the third throw? That it takes more than three throws for Liz to hit the bull's eye for the first time? That it takes at least three throws?</item>
+
+<item>
+<m:math><m:mi>X</m:mi></m:math> takes on the values _______.</item>
+<item>
+<m:math><m:mi>μ</m:mi><m:mo stretchy="false">=</m:mo></m:math> _______. In words, 
+<m:math><m:mi>μ</m:mi></m:math> is _______</item></list><para id="element-136"><title>The Geometric Equation</title><m:math><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>X</m:mi><m:mo stretchy="false">=</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">=</m:mo><m:msup><m:mi>q</m:mi><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">−</m:mo><m:mn>1</m:mn></m:mrow></m:msup><m:mo stretchy="false">⋅</m:mo><m:mi>p</m:mi></m:math></para><para id="element-887"><title>Hypergeometric Distribution</title>The <emphasis>hypergeometric distribution</emphasis> is characterized by choosing a sample without replacement from two distinct groups. One of the two groups is what is of interest in the sample. Some lotteries are based on the hypergeometric distribution.
+click to edit note</para>
+
+
+<example id="id2fs"><para id="id243ff">Suppose a shipment of 20 tape recorders contains 5 defectives. An inspector randomly chooses 8 of the tape recorders to inspect. He is interested in the number of defectives in the sample of 8. Have the class answer questions similar to those for the binomial and the geometric.</para></example>
+
+
+
+<note id="id39324373" type="Notation"><label>Notation</label><m:math><m:mi>X</m:mi></m:math> ~ 
+<m:math><m:mi>H</m:mi><m:mo stretchy="false">(</m:mo><m:mi>r</m:mi><m:mi>,</m:mi><m:mi>b</m:mi><m:mi>,</m:mi><m:mi>n</m:mi><m:mo stretchy="false">)</m:mo></m:math> where 
+<m:math><m:mi>r</m:mi></m:math> = size of the group of interest, 
+<m:math><m:mi>b</m:mi></m:math> = size of the other group, and 
+<m:math><m:mi>n</m:mi></m:math> = size of the sample.</note>
+
+
+
+<para id="pj"><title>Poisson Distribution</title>The Poisson distribution is concerned with the number of times an event takes place in a certain interval. It is used in the field of reliability. The Poisson approximates the binomial when n is "large" (say, more than 100) and p is "small" (say, less than 0.1).</para>
+
+<example id="id24gd"> <para id="f243">Suppose the average number of accidents that occur in a week at a particularly busy intersection is one. The interval is one week. The average is one accident. Let 
+<m:math><m:mi>X</m:mi></m:math> = the number of accidents that occur in a one week period at the intersection. Have the students help fill in the blanks and answer the questions:</para></example>
+
+<list id="list131" list-type="enumerated"><item>
+<m:math><m:mi>X</m:mi><m:mo>~</m:mo></m:math> _______ 
+
+(<m:math><m:mi>X</m:mi>
+<m:mo>~</m:mo>
+<m:mi>P</m:mi>
+<m:mo stretchy="false">(</m:mo>
+<m:mi>μ</m:mi></m:math> 
+where 
+<m:math><m:mi>μ</m:mi><m:mo stretchy="false">=</m:mo><m:mtext>one</m:mtext><m:mspace width="2pt"/><m:mtext>accident</m:mtext><m:mo>)</m:mo></m:math>)</item>
+<item> What values does 
+<m:math><m:mi>X</m:mi></m:math> take on? </item><item> What is the probability that at most one accident occurs in a week?</item></list>
+
+<para id="knk"><title>The Poisson Distribution Formula</title>
+The parameter for the Poisson is the mean, 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>μ</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{μ} {}</m:annotation></m:semantics></m:math>. Some books and calculators use the Greek letter, 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>λ</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{λ} {}</m:annotation></m:semantics></m:math> (lambda) as the mean. The equation for the Poisson is:<equation id="eq24"><m:math><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>X</m:mi><m:mo stretchy="false">=</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>μ</m:mi><m:mi>x</m:mi></m:msup><m:mo stretchy="false">⋅</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mo stretchy="false">−</m:mo><m:mi>μ</m:mi></m:mrow></m:msup></m:mrow><m:mrow><m:mi>x</m:mi><m:mi>!</m:mi></m:mrow></m:mfrac><m:mspace width="12pt"/> <m:mtext> where   
+</m:mtext><m:mspace width="12pt"/><m:mi>x</m:mi><m:mo stretchy="false">=</m:mo><m:mtext>0,1,2,3,...</m:mtext></m:math>
+</equation>
+</para>
+
+
+<para id="element-704"><title>Assign Practice</title>Have the students complete the <emphasis>portion of the practice</emphasis> that is appropriate for what you have covered in class. Expected Value, Binomial, and Poisson are dealt with <link document="m16830">Practice 1</link>, <link document="m17107">Practice 2</link>, and <link document="m17109">Practice 3</link>. <link document="m17108">Practice 4</link> is based on the Geometric Distribution, while <link document="m17106">Practice 5</link> is focused on reviewing the Hypergeometric Distribution.</para><para id="element-396"><title>Calculator Instructions</title>If you are using the TI-83/TI-84 series, there are probability functions for the binomial, Poisson, and geometric. Each has a pdf and a cdf (for example binompdf and binomcdf).These functions are located in 2nd DISTR. If you use, say, <code>binompdf(n,p)</code>
+, you will get the table of probabilities for 0, 1, 2, ..., 
+<m:math><m:mi>n</m:mi></m:math>. If you use <code>binompdf(n,p)</code>
+, you will get the probability of <m:math><m:mi>x</m:mi></m:math>. If you use <code>binomcdf(n, p, x)</code>, you will get the cumulative probability 
+
+<m:math><m:mo stretchy="false">(</m:mo><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>X</m:mi><m:mo stretchy="false">=</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">+</m:mo><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>X</m:mi><m:mo stretchy="false">=</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">+</m:mo><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>X</m:mi><m:mo stretchy="false">=</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">+</m:mo><m:mtext>...</m:mtext><m:mo stretchy="false">+</m:mo><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>X</m:mi><m:mo stretchy="false">=</m:mo><m:mi>n</m:mi><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo></m:math>.</para><para id="element-851"><title>Assign Homework</title>Assign <link document="m16823">Homework</link>. Suggested homework: 1 - 17 odds, 23, 33 - 37 (Binomial and Poisson).</para>
+    
+      
+    
+  </content>
+  
+</document>

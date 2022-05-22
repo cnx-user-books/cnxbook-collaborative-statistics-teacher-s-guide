@@ -1,0 +1,214 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Continuous Random Variables: Teacher's Guide</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>cfe9609a-ac11-4eca-9500-c4e676b6e85d</md:uuid>
+</metadata>
+  <content>
+<para id="element-198">This chapter is a good introduction to continuous types of probability distributions (the most famous of all is the normal). Two continuous distributions are covered – the uniform (or rectangular) and the exponential. For the uniform, probability is just the area of a rectangle. This distribution easily gets across the concept that probability is equal to area under a "curve" (a function). The exponential, which is used in industry and models decay, is a nice lead-in to the normal. The uniform and exponential distributions are also nice distributions to start with when you teach the Central Limit Theorem. It is interesting to note that the amount of money spent in one trip to the supermarket follows an exponential distribution. Several of our students discovered this idea when they chose data for their second project.</para><para id="element-958"><title>Compare Binomial v. Continuous Distribution</title>Begin this chapter by a comparison of a binomial (discrete) distribution and a continuous distribution. Using the normal for this comparison works well because the students are already familiar with it. The binomial graph has probability = height and the normal graph has probability = area. Tell the students that the discovery of probability = area in the continuous graph comes from calculus (which most of them have not studied). Draw the two graphs to make these ideas clear.</para><para id="element-964"><title>Introduce Uniform Distribution</title>Introduce the uniform distribution using the following example: The amount of time a student waits in line at the college cafeteria is uniformly distributed in the interval from 0 to 5 minutes (the students must wait in line from 0 to 5 minutes - each time in this interval is equally likely). Note: all the times cannot be listed. This is different from the discrete distributions.
+</para><example id="element-441"><para id="element-32">Let <m:math><m:mi>X</m:mi></m:math>= the amount of time (in minutes) a student waits in line at the college cafeteria. The notation for the distribution is <m:math><m:mi>X</m:mi></m:math>~ <m:math><m:mi>U</m:mi><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>)</m:mo> </m:math> where <m:math><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:math> and <m:math><m:mi>b</m:mi><m:mo>=</m:mo><m:mn>5</m:mn></m:math>. 
+
+The function is <m:math><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo><m:mo>=</m:mo>
+<m:mfrac><m:mn>1</m:mn><m:mn>5</m:mn></m:mfrac></m:math> where 
+<m:math><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>5</m:mn></m:math>. 
+
+The pattern is <m:math><m:mtext>f(x)</m:mtext><m:mo>=</m:mo>
+<m:mfrac><m:mn>1</m:mn><m:mrow><m:mi>b</m:mi><m:mo>−</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:math> where <m:math> <m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mi>&lt;</m:mi><m:mi>b</m:mi></m:math>.</para><para id="element-342">In this example <m:math><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:math> and <m:math><m:mi>b</m:mi><m:mo>=</m:mo><m:mn>5</m:mn></m:math>. The function <m:math><m:mi>f</m:mi><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:math> where <m:math><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>5</m:mn></m:math> graphs as a horizontal line segment.</para>
+
+<figure id="newfig"><media id="idm3200368" alt=""><image src="../../media/graph.PNG" mime-type="image/png" print-width="2in"/></media><caption> Because <m:math><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>5</m:mn>
+</m:math>, the maximum area = (15)(5)=1, the largest probability possible.</caption></figure>
+</example>
+<example id="e-element-211">
+<exercise id="element-211"><problem id="idm3031584"><para id="problem_1-1">Find the probability that a student must wait less than 3 minutes. Draw the picture and write the probability statement.</para></problem>
+
+<solution id="idm15750624"><para id="solution_1-1"><figure id="figure31"><media id="idm9569696" alt=""><image src="../../media/graph3.PNG" mime-type="image/png" print-width="2.5in"/></media><caption>Probability statement: <m:math><m:mtext>P(X&lt;3)</m:mtext><m:mo>=</m:mo><m:mo>(</m:mo><m:mn>3</m:mn>
+<m:mo>−</m:mo><m:mn>0</m:mn><m:mo>)</m:mo><m:mo>(</m:mo><m:mn>15</m:mn>
+<m:mo>)</m:mo><m:mo>=</m:mo><m:mo>35</m:mo></m:math>.</caption></figure>
+
+The probability is the shaded area (the area of a rectangle with <m:math><m:mtext>base</m:mtext> <m:mo>=</m:mo> <m:mi>b</m:mi><m:mo>−</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>−</m:mo>
+<m:mn>0</m:mn><m:mo>=</m:mo><m:mn>3</m:mn></m:math> and <m:math><m:mtext>height</m:mtext> <m:mo>=</m:mo> <m:mfrac><m:mn>1</m:mn><m:mn>5</m:mn></m:mfrac></m:math>. The probability a student must wait in the cafeteria line less than 3 minutes is <m:math><m:mfrac><m:mn>3</m:mn><m:mn>5</m:mn></m:mfrac></m:math>.</para></solution></exercise>
+
+</example>
+<example id="e-element-863">
+<exercise id="element-863"><problem id="idp849024"><para id="problem_2-1">Find the average wait time.</para></problem>
+<solution id="idp2453184"><para id="solution_2-1"><m:math><m:mi>μ</m:mi><m:mo stretchy="false">=</m:mo><m:mfrac><m:mrow><m:mi>a</m:mi><m:mo stretchy="false">+</m:mo><m:mi>b</m:mi></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo stretchy="false">=</m:mo><m:mfrac><m:mrow><m:mn>0</m:mn><m:mo stretchy="false">+</m:mo><m:mn>5</m:mn></m:mrow><m:mn>2</m:mn></m:mfrac>
+
+<m:mo stretchy="false">=</m:mo><m:mn>2.5</m:mn> <m:mspace width="2pt"/><m:mtext>minutes</m:mtext></m:math></para></solution></exercise>
+</example>
+
+<para id="element-915">If the students take the time to draw the picture and write the probability statement, the problem becomes much easier.</para>
+<example id="e-element-870">
+<exercise id="element-870"><problem id="idp1386336"><para id="problem_3-1">Find the 75th percentile of waiting times. A time is being asked for here. Percentiles often confuse students. They see "75th" and think they need to find a probability. Draw a picture and write a probability statement. Let 
+<m:math><m:mi>k</m:mi></m:math> = the 75th percentile.</para></problem><solution id="idm6868656"><para id="solution_3-1"><figure id="idm8617264"><media id="idp3524320" alt=""><image src="../../media/graph4.PNG" mime-type="image/png" print-width="2.5in"/></media></figure>
+
+<list id="list4-1" list-type="bulleted"><item>Probability statement:
+<m:math><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>X</m:mi><m:mo stretchy="false">&lt;</m:mo><m:mi>k</m:mi><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">=</m:mo><m:mn>0.75</m:mn></m:math></item>
+
+<item>Area:  
+<m:math><m:mo stretchy="false">(</m:mo><m:mi>k</m:mi><m:mo>−</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>(</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>5</m:mn></m:mfrac><m:mo>)</m:mo>
+<m:mo>=</m:mo><m:mn>0.75</m:mn><m:mspace width="12pt"/><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>3.75</m:mn></m:math> minutes</item></list> 75% of the students wait at most 3.75 minutes and 25% of the students wait at least 3.75 minutes.</para></solution></exercise>
+</example>
+<example id="eelement-532">
+<exercise id="element-532"><problem id="idm3764816"><para id="problem_4-1">You can finish the uniform with a conditional. This reviews conditionals from <link document="m16808">Continuous Random Variables</link>. What is the probability that a student waits more than 4 minutes when he/she has already waited more than 3 minutes?</para></problem><solution id="idp1385984"><para id="solution_4-1">Algebraically: 
+<m:math><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>X</m:mi><m:mo stretchy="false">&gt;</m:mo><m:mn>4</m:mn><m:mo>|</m:mo>
+<m:mi>X</m:mi><m:mo stretchy="false">&gt;</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo>
+
+
+<m:mo stretchy="false">=</m:mo>
+   <m:mfrac><m:mrow><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>X</m:mi><m:mo stretchy="false">&gt;</m:mo><m:mn>4</m:mn><m:mspace width="2pt"/><m:mtext>AND</m:mtext><m:mspace width="2pt"/><m:mtext>X</m:mtext><m:mo stretchy="false">&gt;</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo></m:mrow>
+
+<m:mrow><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>X</m:mi><m:mo stretchy="false">&gt;</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:mfrac>
+
+<m:mo stretchy="false">=</m:mo><m:mfrac><m:mrow><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mrow><m:mi>X</m:mi><m:mo stretchy="false">&gt;</m:mo><m:mn>4</m:mn></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow>
+
+<m:mrow><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mrow><m:mi>X</m:mi><m:mo stretchy="false">&gt;</m:mo><m:mn>3</m:mn></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow></m:mfrac></m:math></para><para id="element-925-1"><note id="idp3522432">The students see it more clearly if you do the problem graphically. The lower value, a, changes from 0 to 3. The upper value stays the same 
+<m:math><m:mo stretchy="false">(</m:mo><m:mi>b</m:mi><m:mo stretchy="false">=</m:mo><m:mn>5</m:mn></m:math>). The function changes to: 
+      <m:math>
+                  <m:mi>f</m:mi>
+                  <m:mo stretchy="false">(</m:mo>
+                  <m:mi>x</m:mi>
+                      <m:mo stretchy="false">)</m:mo>
+                      <m:mo stretchy="false">=</m:mo>
+                      <m:mfrac>
+                        <m:mn>1</m:mn>
+                        <m:mrow>
+                          <m:mn>5</m:mn>
+                          <m:mo stretchy="false">−</m:mo>
+                          <m:mn>3</m:mn>
+                        </m:mrow>
+                      </m:mfrac>
+                    <m:mo stretchy="false">=</m:mo>
+                    <m:mfrac>
+                      <m:mn>1</m:mn>
+                      <m:mn>2</m:mn>
+                    </m:mfrac>
+      </m:math>
+    </note>
+<figure id="idp1009216"><media id="idp3202736" alt=""><image src="../../media/graph5.PNG" mime-type="image/png" print-width="2.5in"/></media><caption><m:math>
+<m:mi>P</m:mi>
+<m:mo stretchy="false">(</m:mo>
+<m:mi>X</m:mi><m:mo stretchy="false">&gt;</m:mo>
+<m:mn>4</m:mn>
+<m:mo>|</m:mo>
+<m:mi>X</m:mi>
+<m:mo stretchy="false">&gt;</m:mo>
+<m:mn>3</m:mn>
+<m:mo stretchy="false">)</m:mo>
+<m:mo stretchy="false">=</m:mo>
+<m:mo stretchy="false">(</m:mo>
+<m:mtext>base</m:mtext>
+<m:mo stretchy="false">)</m:mo>
+<m:mo stretchy="false">(</m:mo>
+<m:mtext>height</m:mtext>
+<m:mo stretchy="false">)</m:mo>
+<m:mo stretchy="false">=</m:mo>
+<m:mo stretchy="false">(</m:mo>
+<m:mn>5</m:mn>
+<m:mo stretchy="false">-</m:mo>
+<m:mn>4</m:mn>
+<m:mo stretchy="false">)</m:mo>
+<m:mo>(</m:mo>
+<m:mfrac>
+   <m:mn>1</m:mn>
+   <m:mn>2</m:mn>
+</m:mfrac>
+<m:mo>)</m:mo>
+<m:mo stretchy="false">=</m:mo>
+<m:mfrac>
+   <m:mn>1</m:mn>
+   <m:mn>2</m:mn>
+</m:mfrac>
+</m:math></caption></figure></para></solution></exercise>
+</example>
+<para id="element-939"><title>Introduce the Change Example</title>The <emphasis>exponential </emphasis>distribution is generally concerned with how a quantity declines or decays. Examples include the life of a car battery, the life of a light bulb, the length of time business long distance telephone calls last, and the amount of change a person is carrying. You can introduce the exponential by using the change example. Ask everyone in your classroom to count their change and record it. Then have them calculate the mean and standard deviation and graph the histogram. The histogram should appear to be declining. Let 
+<m:math><m:mi>X</m:mi></m:math> = the amount of change one person carries. Notation: 
+<m:math><m:mi>X</m:mi></m:math> ~ 
+<m:math><m:mtext>Exp</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>m</m:mi><m:mo stretchy="false">)</m:mo></m:math> where 
+<m:math><m:mi>m</m:mi></m:math> is the parameter that controls the amount of decline or decay; 
+<m:math><m:mi>m</m:mi><m:mo stretchy="false">=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>μ</m:mi></m:mfrac></m:math> and 
+<m:math><m:mi>μ</m:mi><m:mo stretchy="false">=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>m</m:mi></m:mfrac></m:math>. Also, 
+<m:math><m:mi>μ</m:mi><m:mo stretchy="false">=</m:mo><m:mi>σ</m:mi></m:math>. (In the example, the calculated mean and standard deviation ought to be fairly close.)</para>
+
+<example id="e-element-123">
+<para id="problem_510-1">The function is 
+ where 
+
+<m:math><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">=</m:mo><m:msub><m:mtext>me</m:mtext><m:mrow><m:mo stretchy="false">−</m:mo><m:mtext>mx</m:mtext></m:mrow></m:msub></m:math>
+
+<m:math><m:mi>m</m:mi><m:mo stretchy="false">≥</m:mo><m:mn>0</m:mn></m:math> AND 
+<m:math><m:mi>x</m:mi><m:mo stretchy="false">≥</m:mo><m:mn>0</m:mn></m:math>. Find the probability that the amount of change one person has is less then $.50. Draw the graph.</para>
+
+<para id="solution_510-1"><figure id="idm1596592"><media id="idm1596464" alt=""><image src="../../media/graph6.PNG" mime-type="image/png" print-width="2.5in"/></media><caption>The right tail extends indefinitely. There is no upper limit in x.</caption></figure>
+
+The formula is 
+<m:math><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>X</m:mi><m:mo stretchy="false">&lt;</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">=</m:mo><m:mn>1</m:mn><m:mo stretchy="false">−</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>mx</m:mtext></m:mrow></m:msup><m:mspace width="12pt"/>
+<m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>X</m:mi><m:mo stretchy="false">&lt;</m:mo><m:mn>.50</m:mn><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">=</m:mo></m:math> _________. 
+
+
+The authors use technology to solve the probability problems. If you use the TI-83/84 calculator series, enter on the home-screen, 
+<m:math><m:mn>1</m:mn><m:mo stretchy="false">−</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mo stretchy="false">−</m:mo><m:mi>m</m:mi><m:mo stretchy="false">⋅</m:mo><m:mn>.50</m:mn></m:mrow></m:msup></m:math>. Fill in the 
+
+<m:math><m:mi>m</m:mi></m:math> with whatever the data produces (
+<m:math><m:mi>m</m:mi><m:mo stretchy="false">=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>μ</m:mi></m:mfrac></m:math>; replace 
+<m:math><m:mi>μ</m:mi></m:math> with the sample mean).</para>
+
+<para id="element-302">Ask the question, "Ninety percent of you have less than what amount?" and have them find the 90th percentile.</para>
+
+<para id="problem_610-1">Draw the picture and let 
+<m:math><m:mi>k</m:mi></m:math> = the 90th percentile. 
+
+<m:math><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>X</m:mi><m:mo stretchy="false">&lt;</m:mo><m:mi>k</m:mi><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">=</m:mo><m:mn>0.90</m:mn></m:math>. 
+
+Solve the equation <m:math><m:mn>1</m:mn><m:mo stretchy="false">−</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>mk</m:mi></m:mrow></m:msup><m:mo stretchy="false">=</m:mo><m:mn>0.90</m:mn></m:math> for 
+
+<m:math><m:mi>k</m:mi></m:math>. On the home-screen of the TI-83/TI-84, enter 
+<m:math><m:mfrac><m:mrow><m:mn>ln</m:mn><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">−</m:mo><m:mn>.90</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mo stretchy="false">(</m:mo><m:mo stretchy="false">−</m:mo><m:mi>m</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:mfrac></m:math>.</para><para id="solution_610-10"><note id="idm648512">Have students fill in the blanks.</note>
+ On average, a student would<emphasis> expect</emphasis> to have _________ . The word "expect" implies the mean. Ten students together would <emphasis>expect</emphasis> to have _________. (the mean multiplied by 10)</para>
+</example>
+
+<para id="element-277"><title>Assign Practice </title>Assign the <link document="m16812">Practice 1</link> and <link document="m16811">Practice 2</link> in class to be done in groups.
+</para><para id="element-232"><title>Assign Homework</title>Assign <link document="m16807">Homework </link>. Suggested problems: 1 -13 odds, 15 - 20.
+</para>   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </content>
+</document>

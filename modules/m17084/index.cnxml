@@ -1,0 +1,349 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Ch 12: Linear Regression and Correlation</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m17084</md:content-id>
+  <md:title>Ch 12: Linear Regression and Correlation</md:title>
+  <md:abstract>This module is the complementary teacher's guide for the "Linear Regression and Correlation" chapter of the Collaborative Statistics collection (col10522) by Barbara Illowsky and Susan Dean.</md:abstract>
+  <md:uuid>3a0c16fd-8900-4687-9bbc-d1378543cd29</md:uuid>
+</metadata>
+<featured-links>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit below.
+       Changes to the links section in the source will not be saved. -->
+    <link-group type="supplemental">
+      <link url="http://cnx.org/content/m17089/latest/" strength="3">View this Chapter from the Collaborative Statistics Textbook Online.</link>
+    </link-group>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit above.
+       Changes to the links section in the source will not be saved. -->
+</featured-links>
+<content>
+    <para id="id6810325">Entire courses are given on linear regression and correlation. This chapter serves as an introduction to the topics.</para>
+
+<para id="id68130325">It helps to review the equation of a line. We use 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>a</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{a} {}</m:annotation></m:semantics></m:math> for the 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>y</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{y} {}</m:annotation></m:semantics></m:math>-intercept and 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>b</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{b} {}</m:annotation></m:semantics></m:math> for the slope. The line has the form:
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mi>y</m:mi><m:mo stretchy="false">=</m:mo><m:mrow><m:mi>a</m:mi><m:mo stretchy="false">+</m:mo><m:mstyle fontstyle="italic"><m:mrow><m:mtext>bx</m:mtext></m:mrow></m:mstyle></m:mrow></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{y=a+ ital "bx"} {}</m:annotation></m:semantics></m:math></para>
+
+<example id="ex1">
+<exercise id="exer1"><problem id="id1170276548575"><para id="para1">Have the students plot a line by eye using the following data. The independent variable 
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mi>x</m:mi>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{x} {}</m:annotation>
+        </m:semantics>
+      </m:math>
+     represents the size of a color television screen in inches at Anderson's and 
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mrow>
+              <m:mtable>
+                <m:mtr>
+                  <m:mrow>
+                    <m:mstyle fontsize="12pt">
+                      <m:mrow>
+                        <m:mi>y</m:mi>
+                      </m:mrow>
+                    </m:mstyle>
+                    <m:mrow/>
+                  </m:mrow>
+                </m:mtr>
+                <m:mtr>
+                  <m:mrow/>
+                </m:mtr>
+              </m:mtable>
+              <m:mrow/>
+            </m:mrow>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0">alignl { stack {
+ size 12{y}  {} # 
+ {} 
+} } {}</m:annotation>
+        </m:semantics>
+      </m:math>
+     represents the sales price in dollars.
+
+<table id="id3370576" summary="This table presents arbitrary x and y values (top and bottom rows, respectively) given to the student to plot by eye.">
+
+<tgroup cols="8"><colspec colnum="1" colname="header_c1"/>
+        <colspec colnum="2" colname="c2"/>
+        <colspec colnum="3" colname="c3"/>
+        <colspec colnum="4" colname="c4"/>
+        <colspec colnum="5" colname="c5"/>
+        <colspec colnum="6" colname="c6"/>
+        <colspec colnum="7" colname="c7"/>
+        <colspec colnum="8" colname="c8"/>
+<thead>
+<row>
+            <entry>
+              <m:math>
+                <m:semantics>
+                  <m:mrow>
+                    <m:mstyle fontsize="12pt">
+                      <m:mrow>
+                        <m:mi>x</m:mi>
+                      </m:mrow>
+                    </m:mstyle>
+                    <m:mrow/>
+                  </m:mrow>
+                  <m:annotation encoding="StarMath 5.0"> size 12{x} {}</m:annotation>
+                </m:semantics>
+              </m:math>
+            </entry>
+            <entry>9</entry>
+            <entry>20</entry>
+            <entry>27</entry>
+            <entry>31</entry>
+            <entry>35</entry>
+            <entry>40</entry>
+            <entry>60</entry>
+          </row>
+</thead>        
+
+<tbody>
+          
+          <row>
+            <entry>
+              <m:math>
+                <m:semantics>
+                  <m:mrow>
+                    <m:mstyle fontsize="12pt">
+                      <m:mrow>
+                        <m:mi>y</m:mi>
+                      </m:mrow>
+                    </m:mstyle>
+                    <m:mrow/>
+                  </m:mrow>
+                  <m:annotation encoding="StarMath 5.0"> size 12{y} {}</m:annotation>
+                </m:semantics>
+              </m:math>
+            </entry>
+            <entry>147</entry>
+            <entry>197</entry>
+            <entry>297</entry>
+            <entry>447</entry>
+            <entry>1177</entry>
+            <entry>2177</entry>
+            <entry>2497</entry>
+          </row>
+        </tbody>
+      
+</tgroup>
+</table></para>
+
+<para id="para2">Ask them what they got for the slope and for the y-intercept. Make comparisons. This exercise should point out how difficult it is to get an accurate line of best fit and how many lines "seem" to fit the data. (This data is taken from the exercises.)</para></problem>
+
+<solution id="id1170284643660"><para id="para3">For the data above, use either a calculator or a computer and calculate the least squares or best fit line. Look at the scatter plot first. Ask the students if their "by eye" line looks like the calculated one. Explain the correlation coefficient and then check if the correlation coefficient is significant by comparing it to the correct entry in 95% CRITICAL VALUES OF THE SAMPLE CORRELATION COEFFICIENT Table at the end of the reading.</para>
+
+<para id="para4">If you use the TI-83/84 series, enter the data into two lists first. Then plot the data points on the calculator. First set up the stat plot (2nd STAT PLOT). Then press ZOOM 9 to see the plot. To do the linear regression, go to the LinReg
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  <m:mo stretchy="false">(</m:mo>
+                  <m:mrow>
+                    <m:mi>a</m:mi>
+                    <m:mo stretchy="false">+</m:mo>
+                    <m:mstyle fontstyle="italic">
+                      <m:mrow>
+                        <m:mtext>bx</m:mtext>
+                      </m:mrow>
+                    </m:mstyle>
+                  </m:mrow>
+                  <m:mo stretchy="false">)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{ \( a+ ital "bx" \) } {}</m:annotation>
+        </m:semantics>
+      </m:math>
+     function in STAT CALC. Enter the lists. At this time, you could also enter a y-variable after the lists (after you enter the lists, enter a comma and then press VARS Y-VARS Function Y1). Press ENTER to see the linear regression. When you press GRAPH, the line will plot.</para>
+
+<para id="para5">Line of best fit: <m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mrow><m:mstyle fontstyle="italic"><m:mrow><m:mtext>yhat</m:mtext></m:mrow></m:mstyle><m:mo stretchy="false">=</m:mo><m:mrow><m:mo stretchy="false">−</m:mo><m:mtext>745</m:mtext></m:mrow></m:mrow><m:mtext>.</m:mtext><m:mrow><m:mtext>2420</m:mtext><m:mo stretchy="false">+</m:mo><m:mtext>54</m:mtext></m:mrow><m:mtext>.</m:mtext><m:mtext>7557</m:mtext><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ ital "y-hat"= - "745" "." "2420"+"54" "." "7557"x} {}</m:annotation></m:semantics></m:math>.</para></solution></exercise>
+</example>
+
+
+<para id="id681032325">Explain "predicting" (or forecasting) and have them predict the sales price of a 45 inch screen color TV. Have them predict the cost for a mini 5 inch color TV. (The answer is negative.) Discuss that the line is only valid from the lowest to the highest 
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mi>x</m:mi>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{x} {}</m:annotation>
+        </m:semantics>
+      </m:math>
+    - values.</para>
+
+<example id="c24432"><exercise id="exer2"><problem id="id6935393"><para id="para55">Have the students follow the "outlier" example in the text and (just once!) do the calculations for finding an outlier. Have them fill in the table below.</para>
+
+<para id="para56"><table id="id2229779" summary="This table shows the values for the data and outliers and asks students to fill them in.">
+
+      <tgroup cols="5">
+        <colspec colnum="1" colname="c1"/>
+        <colspec colnum="2" colname="c2"/>
+        <colspec colnum="3" colname="c3"/>
+        <colspec colnum="4" colname="c4"/>
+        <colspec colnum="5" colname="c5"/>
+        <tbody>
+          <row>
+            <entry>
+              <m:math>
+                <m:semantics>
+                  <m:mrow>
+                    <m:mstyle fontsize="12pt">
+                      <m:mrow>
+                        <m:mi>x</m:mi>
+                      </m:mrow>
+                    </m:mstyle>
+                    <m:mrow/>
+                  </m:mrow>
+                  <m:annotation encoding="StarMath 5.0"> size 12{x} {}</m:annotation>
+                </m:semantics>
+              </m:math>
+            </entry>
+            <entry>
+              <m:math>
+                <m:semantics>
+                  <m:mrow>
+                    <m:mstyle fontsize="12pt">
+                      <m:mrow>
+                        <m:mi>y</m:mi>
+                      </m:mrow>
+                    </m:mstyle>
+                    <m:mrow/>
+                  </m:mrow>
+                  <m:annotation encoding="StarMath 5.0"> size 12{y} {}</m:annotation>
+                </m:semantics>
+              </m:math>
+            </entry>
+            <entry>
+              <m:math>
+                <m:semantics>
+                  <m:mrow>
+                    <m:mstyle fontsize="12pt">
+                      <m:mrow>
+                        <m:mrow>
+                          <m:mi>y</m:mi>
+                          <m:mo stretchy="false">−</m:mo>
+                          <m:mstyle fontstyle="italic">
+                            <m:mrow>
+                              <m:mtext>yhat</m:mtext>
+                            </m:mrow>
+                          </m:mstyle>
+                        </m:mrow>
+                      </m:mrow>
+                    </m:mstyle>
+                    <m:mrow/>
+                  </m:mrow>
+                  <m:annotation encoding="StarMath 5.0"> size 12{y -  ital "yhat"} {}</m:annotation>
+                </m:semantics>
+              </m:math>
+            </entry>
+            <entry>
+              <m:math>
+                <m:semantics>
+                  <m:mrow>
+                    <m:mstyle fontsize="12pt">
+                      <m:mrow>
+                        <m:mrow>
+                          <m:mo stretchy="false">∣</m:mo>
+                          <m:mrow>
+                            <m:mi>y</m:mi>
+                            <m:mo stretchy="false">−</m:mo>
+                            <m:mstyle fontstyle="italic">
+                              <m:mrow>
+                                <m:mtext>yhat</m:mtext>
+                              </m:mrow>
+                            </m:mstyle>
+                          </m:mrow>
+                          <m:mo stretchy="false">∣</m:mo>
+                        </m:mrow>
+                      </m:mrow>
+                    </m:mstyle>
+                    <m:mrow/>
+                  </m:mrow>
+                  <m:annotation encoding="StarMath 5.0"> size 12{ lline y -  ital "yhat" rline } {}</m:annotation>
+                </m:semantics>
+              </m:math>
+            </entry>
+            <entry>
+              <m:math>
+                <m:semantics>
+                  <m:mrow>
+                    <m:mstyle fontsize="12pt">
+                      <m:mrow>
+                        <m:mrow>
+                          <m:mo stretchy="false">(</m:mo>
+                          <m:mrow>
+                            <m:mo stretchy="false">∣</m:mo>
+                            <m:mrow>
+                              <m:mi>y</m:mi>
+                              <m:mo stretchy="false">−</m:mo>
+                              <m:mstyle fontstyle="italic">
+                                <m:mrow>
+                                  <m:mtext>yhat</m:mtext>
+                                </m:mrow>
+                              </m:mstyle>
+                            </m:mrow>
+                            <m:mo stretchy="false">∣</m:mo>
+                          </m:mrow>
+                          <m:msup>
+                            <m:mo stretchy="false">)</m:mo>
+                            <m:mstyle fontsize="8pt">
+                              <m:mrow>
+                                <m:mn>2</m:mn>
+                              </m:mrow>
+                            </m:mstyle>
+                          </m:msup>
+                        </m:mrow>
+                      </m:mrow>
+                    </m:mstyle>
+                    <m:mrow/>
+                  </m:mrow>
+                  <m:annotation encoding="StarMath 5.0"> size 12{ \(  lline y -  ital "yhat" rline  \)  rSup { size 8{2} } } {}</m:annotation>
+                </m:semantics>
+              </m:math>
+            </entry>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+            <entry/>
+            <entry/>
+            <entry/>
+          </row>
+        </tbody>
+      </tgroup>
+    </table></para><para id="element-585">Find: 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mrow><m:msub><m:mo stretchy="false">∑</m:mo><m:mstyle fontsize="8pt"><m:mrow><m:mn>7</m:mn></m:mrow></m:mstyle></m:msub><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow><m:mo stretchy="false">∣</m:mo><m:mrow><m:mi>y</m:mi><m:mo stretchy="false">−</m:mo><m:mstyle fontstyle="italic"><m:mrow><m:mtext>yhat</m:mtext></m:mrow></m:mstyle></m:mrow><m:mo stretchy="false">∣</m:mo></m:mrow></m:mrow></m:mrow><m:mrow><m:msup><m:mo stretchy="false">)</m:mo><m:mstyle fontsize="8pt"><m:mrow><m:mn>2</m:mn></m:mrow></m:mstyle></m:msup><m:mo stretchy="false">=</m:mo><m:mstyle fontstyle="italic"><m:mrow><m:mtext>SSE</m:mtext></m:mrow></m:mstyle></m:mrow></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ Sum rSub { size 8{7} }  { \(  lline y -  ital "yhat" rline }  \)  rSup { size 8{2} } = ital "SSE"} {}</m:annotation></m:semantics></m:math></para><para id="element-237">Find 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mi>s</m:mi><m:mo stretchy="false">=</m:mo><m:msqrt><m:mfrac><m:mstyle fontstyle="italic"><m:mrow><m:mtext>SSE</m:mtext></m:mrow></m:mstyle><m:mrow><m:mi>n</m:mi><m:mo stretchy="false">−</m:mo><m:mn>2</m:mn></m:mrow></m:mfrac></m:msqrt></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{s= sqrt { {  { ital "SSE"}  over  {n - 2} } } } {}</m:annotation></m:semantics></m:math></para><para id="element-612"><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mi>n</m:mi><m:mo stretchy="false">=</m:mo><m:mrow/></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{n={}} {}</m:annotation></m:semantics></m:math>the total number of data values (7 for this problem)</para><para id="element-228"><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>s</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{s} {}</m:annotation></m:semantics></m:math> is the standard deviation of the 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mo stretchy="false">∣</m:mo><m:mrow><m:mi>y</m:mi><m:mo stretchy="false">−</m:mo><m:mstyle fontstyle="italic"><m:mrow><m:mtext>yhat</m:mtext></m:mrow></m:mstyle></m:mrow><m:mo stretchy="false">∣</m:mo></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ lline y -  ital "yhat" rline } {}</m:annotation></m:semantics></m:math> values</para><para id="element-973">Multiply 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>s</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{s} {}</m:annotation></m:semantics></m:math> by 1.9: 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mtext>.</m:mtext><m:mn>9</m:mn><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">(</m:mo><m:mi>s</m:mi><m:mrow><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">=</m:mo><m:mrow/></m:mrow></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ \( 1 "." 9 \)  \( s \) ={}} {}</m:annotation></m:semantics></m:math>_______</para><para id="element-972">Compare each 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mo stretchy="false">∣</m:mo><m:mrow><m:mi>y</m:mi><m:mo stretchy="false">−</m:mo><m:mstyle fontstyle="italic"><m:mrow><m:mtext>yhat</m:mtext></m:mrow></m:mstyle></m:mrow><m:mo stretchy="false">∣</m:mo></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ lline y -  ital "yhat" rline } {}</m:annotation></m:semantics></m:math> to 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mtext>.</m:mtext><m:mn>9</m:mn><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">(</m:mo><m:mi>s</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ \( 1 "." 9 \)  \( s \) } {}</m:annotation></m:semantics></m:math>.</para><para id="element-513">If any 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mo stretchy="false">∣</m:mo><m:mrow><m:mi>y</m:mi><m:mo stretchy="false">−</m:mo><m:mstyle fontstyle="italic"><m:mrow><m:mtext>yhat</m:mtext></m:mrow></m:mstyle></m:mrow><m:mo stretchy="false">∣</m:mo></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ lline y -  ital "yhat" rline } {}</m:annotation></m:semantics></m:math> is at least
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mtext>.</m:mtext><m:mn>9</m:mn><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">(</m:mo><m:mi>s</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ \( 1 "." 9 \)  \( s \) } {}</m:annotation></m:semantics></m:math>, then the corresponding point is an outlier. (None of the points is an outlier.)</para></problem></exercise></example>
+
+<para id="id6810324125"><title>Assign Practice</title>Have the students do the <link document="m17088">Practice</link> collaboratively in class.</para>
+
+<para id="id6810321345"><title>Assign Homework</title>Assign <link document="m17085">Homework.</link> Suggested homework: 1, 3, 5, 9, 13, 15 (a - f only if you use the calculator), 21 - 25.</para>
+    
+  </content>
+</document>

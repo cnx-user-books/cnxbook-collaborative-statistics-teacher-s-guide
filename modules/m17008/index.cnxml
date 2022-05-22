@@ -1,0 +1,90 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Hypothesis Testing: Single Mean and Single Proportion: Teacher's Guide</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>3fc6f37d-6788-4ac1-a26c-5f5ec41d523e</md:uuid>
+</metadata>
+  <content>
+    <para id="id10400638">Hypothesis testing is done constantly in business, education, and medicine to name just a few areas. To perform a hypothesis test, you set up <emphasis>two contradictory hypotheses </emphasis>and use data to support one of them. Introduce the students to hypothesis testing by an example. Use a table to show the outcomes. Use 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:msub><m:mi>H</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mi>o</m:mi></m:mrow></m:mstyle></m:msub></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{H rSub { size 8{o} } } {}</m:annotation></m:semantics></m:math> as the null hypothesis and 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:msub><m:mi>H</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mi>a</m:mi></m:mrow></m:mstyle></m:msub></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{H rSub { size 8{a} } } {}</m:annotation></m:semantics></m:math>as the alternate hypothesis. Go over the language "reject 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:msub><m:mi>H</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mi>o</m:mi></m:mrow></m:mstyle></m:msub></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{H rSub { size 8{o} } } {}</m:annotation></m:semantics></m:math>" and "do not reject 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:msub><m:mi>H</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mi>a</m:mi></m:mrow></m:mstyle></m:msub></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{H rSub { size 8{a} } } {}</m:annotation></m:semantics></m:math>".</para>
+
+<example id="id043435rf">
+
+<exercise id="exer1"><problem id="idm4704672"><para id="problem1"><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:msub><m:mi>H</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mi>o</m:mi></m:mrow></m:mstyle></m:msub></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{H rSub { size 8{o} } } {}</m:annotation></m:semantics></m:math>: John loves Marcia. 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:msub><m:mi>H</m:mi><m:mstyle fontsize="8pt"><m:mrow><m:mi>a</m:mi></m:mrow></m:mstyle></m:msub></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{H rSub { size 8{a} } } {}</m:annotation></m:semantics></m:math>: John does not love Marcia.</para><list id="list"><item>Type I error: Reject the null when the null is true. 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>P</m:mi><m:mtext>(Type I error)</m:mtext><m:mo>=</m:mo><m:mi>α</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{P} {}</m:annotation></m:semantics></m:math>
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mrow/></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ {}=a} {}</m:annotation></m:semantics></m:math>.</item>
+
+<item>Type II error: Do not reject the null when the null is false. 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>P</m:mi><m:mtext>(Type II error)</m:mtext><m:mo>=</m:mo><m:mi>β</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{P} {}</m:annotation></m:semantics></m:math>
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mrow/></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ {}=β} {}</m:annotation></m:semantics></m:math>.</item>
+
+</list><list id="list1"><item>Type I error: Marcia thinks John does not love her when he really does.</item>
+
+<item>Type II error: Marcia thinks John does love her when he does not.</item></list>
+
+<para id="element-69">Have the students try to write out the errors before you do. They may require a little prompting. Then have them state the possible consequences for the errors.</para>
+</problem></exercise>
+</example>
+
+<para id="element-73vv7"><title>Conducting a Hypothesis Test</title>To perform the hypothesis test, sample data is gathered. The data typically favors one of the hypotheses (but not always). The test determines which hypothesis the data favors. If the data favors the null hypothesis, we <emphasis>"do not reject"</emphasis> the null hypothesis. If the data does not favor the null hypothesis, we <emphasis>"reject"</emphasis> the null hypothesis. To not reject or to reject are decisions. After a decision is reached, an appropriate conclusion is made using complete sentences.</para>
+
+<para id="element-7s37">Sometimes the data favors neither hypothesis. In this case, we say the test is inconclusive.</para>
+
+<para id="element-7ad37">A hypothesis test may be left-tailed, right-tailed or two-tailed. What the test is concerned with generally determines what type of test is being done.</para>
+
+<para id="element-7d137">Associated with the null hypothesis is a pre-conceived 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>α</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{a} {}</m:annotation></m:semantics></m:math>. 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mi>α</m:mi><m:mo stretchy="false">=</m:mo><m:mi>P</m:mi><m:mtext>(Type I error)</m:mtext></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{a=P} {}</m:annotation></m:semantics></m:math>.Students sometimes have a difficult time when there is no pre-conceived 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>α</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{a} {}</m:annotation></m:semantics></m:math>. We use <m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mrow><m:mi>α</m:mi><m:mo stretchy="false">=</m:mo><m:mn>0</m:mn></m:mrow><m:mtext>.</m:mtext><m:mtext>05</m:mtext></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{a=0 "." "05"} {}</m:annotation></m:semantics></m:math> if there is none.</para>
+
+<para id="element-7137">The data is used to calculate the p-value. The 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mi>p</m:mi></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{p} {}</m:annotation></m:semantics></m:math>-value is the probability that the information (data) will happen purely by chance when the null hypothesis is true. If we reject the null hypothesis, then we believe the information did not happen purely by chance with the current null hypothesis. Therefore, we believe that the null hypothesis is not true.</para>
+
+<para id="element-737">The decision (to reject or not reject) is based on whether 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mi>α</m:mi><m:mo stretchy="false">&gt;</m:mo><m:mi>p</m:mi></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{a&gt;p} {}</m:annotation></m:semantics></m:math>-value or 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mi>α</m:mi><m:mo stretchy="false">&lt;</m:mo><m:mi>p</m:mi></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{a&lt;p} {}</m:annotation></m:semantics></m:math>-value.</para>
+
+<para id="element-1737">The example in the book concerning Jeffrey, an eight-year old swimmer, is a good first example to do with the class. They can follow along in the book and then complete the problem that follows (bench press problem). By filling in the blanks, they are led through the steps of hypothesis testing.</para>
+
+<para id="element-7va37">In the beginning, the students have the most difficulty in determining which test to use (test of a single mean - normal or Student-t or test a binomial proportion) and the type (left-, right-, or two-tailed). We do several examples (usually we choose some homework problems) in class with the students. If a single mean Student-t is done, the assumption is that the population from which the data is taken is normal. In reality, this would have to be shown to be true.</para>
+
+<para id="element-142"><link document="m17136">Here </link> is a series of solution sheets that can be copied and used by the students to do the hypothesis testing problems. A solution sheet makes it clearer to the student what the steps to the tests are.</para>
+
+<para id="element-737453ds">Go over the solution for "Fido's Fleas", a binomial proportion hypothesis testing problem written as a poem. The problem is at the end of the text portion of the chapter. The solution on a solution sheet follows the poem.</para>
+
+<para id="element-73731e">If you use the TI-83/84 series, there are functions to perform the different hypotheses tests. They can be found in STAT TESTS. Z-Test (normal test) does a test of a single mean when the population standard deviation is known; T-test (Student-t test) does a test of a single mean when the population standard deviation is not known; 1-PropZTest (normal test) does a test of a single proportion. The examples in the book contain TI-83/84 calculator instructions, in detail.</para>
+
+<para id="element-71rf37"><title>Assign Practice</title>Assign <link document="m17004">Practice 1</link>, <link document="m17016">Practice 2</link>, and <link document="m17003">Practice 3</link> to be done collaboratively.</para>
+
+<para id="element-73das7"><title>Assign Homework</title>Assign <link document="m17001">Homework</link>. Suggested problems: 1 - 15 odds, 19, 21, 25, 29, 31, 33, 34 - 44.</para>
+
+<para id="element-73fve27"><title>Assign Projects</title>There are two partner projects for this lesson: one uses an <link document="m17140">article</link> and the other is a <link document="m17144">word problem</link>. Students create
+their own hypothesis testing problems and learn much from the process.</para>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </content>
+</document>

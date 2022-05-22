@@ -1,0 +1,330 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Probability Topics: Teacher's Guide</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>f840bd84-83b3-48a1-ac7f-ae0a993e8118</md:uuid>
+</metadata>
+  <content>
+    <para id="id14046403">The best way to introduce the terms is through examples. You can introduce the terms experiment, outcome, sample space, event, probability, equally likely, conditional, mutually exclusive events, and independent events AND you can introduce the addition rule, the multiplication rule with the following example: In a box (you cannot see into it), there are are 4 red cards numbered 1, 2, 3, 4 and 9 green cards numbered 1, 2, 3, 4, 5, 6, 7, 8, 9. You randomly draw one card (experiment). Let <m:math><m:mi>R</m:mi></m:math> be the event the card is red. Let <m:math><m:mi>G</m:mi></m:math> be the event the card is green. Let <m:math><m:mi>E</m:mi></m:math> be the event the card has an even number on it. </para>
+    
+<example id="pro1">    
+<list id="list1" list-type="enumerated"><title>Event Card Example</title><item> List all possible outcomes (the sample space). Have students list the sample space in the form {R1, R2, R3, R4, G1, G2, G3, G4, G5, G6, G7, G8, G9}. Each outcome is equally likely. Plane outcome = 
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mfrac>
+                  <m:mstyle fontsize="8pt">
+                    <m:mrow>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                  </m:mstyle>
+                  <m:mstyle fontsize="8pt">
+                    <m:mrow>
+                      <m:mtext>13</m:mtext>
+                    </m:mrow>
+                  </m:mstyle>
+                </m:mfrac>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{ {  { size 8{1} }  over  { size 8{"13"} } } } {}</m:annotation>
+        </m:semantics>
+      </m:math>
+    .</item><item> Find 
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  <m:mi>P</m:mi>
+                  <m:mo stretchy="false">(</m:mo>
+                  <m:mi>R</m:mi>
+                  <m:mo stretchy="false">)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{P \( R \) } {}</m:annotation>
+        </m:semantics>
+      </m:math>
+    .</item><item> Find 
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  <m:mi>P</m:mi>
+                  <m:mo stretchy="false">(</m:mo>
+                  <m:mi>G</m:mi>
+                  <m:mo stretchy="false">)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{P \( G \) } {}</m:annotation>
+        </m:semantics>
+      </m:math>
+    . G is the complement of R. 
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  <m:mi>P</m:mi>
+                  <m:mo stretchy="false">(</m:mo>
+                  <m:mi>G</m:mi>
+                  <m:mo stretchy="false">)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{P \( G \) } {}</m:annotation>
+        </m:semantics>
+      </m:math>
+     + 
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  <m:mi>P</m:mi>
+                  <m:mo stretchy="false">(</m:mo>
+                  <m:mi>R</m:mi>
+                  <m:mo stretchy="false">)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{P \( R \) } {}</m:annotation>
+        </m:semantics>
+      </m:math>
+     = _______.</item><item> <m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{P \( } {}</m:annotation></m:semantics></m:math>red card given a that the card has an even number on it) = 
+
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  <m:mi>P</m:mi>
+                  <m:mo stretchy="false">(</m:mo>
+                  <m:mi>R</m:mi>
+                  <m:mo stretchy="false">∣</m:mo>
+                  <m:mi>E</m:mi>
+                  <m:mo stretchy="false">)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{P \( R \lline E \) } {}</m:annotation>
+        </m:semantics>
+      </m:math>
+    .This is a conditional. Pick the red card out of the even cards. There are 6 even cards.</item><item> Find <m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>R</m:mi></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{P \( R} {}</m:annotation></m:semantics><m:mspace width="2pt"/><m:mtext>    
+ AND 
+</m:mtext><m:mspace width="2pt"/><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mi>E</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{E \) } {}</m:annotation></m:semantics></m:math>. (Multiplication Rule: 
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mrow>
+                  
+                  <m:mi>P</m:mi><m:mo>(</m:mo><m:mtext>R and E</m:mtext>
+                  <m:mrow>
+                    <m:mo stretchy="false">)</m:mo>
+                    <m:mo stretchy="false">=</m:mo>
+                    <m:mi>P</m:mi>
+                  </m:mrow>
+                  <m:mo stretchy="false">(</m:mo>
+                  <m:mi>E</m:mi>
+                  <m:mo stretchy="false">∣</m:mo>
+                  <m:mi>R</m:mi>
+                  <m:mo stretchy="false">)</m:mo>
+                  <m:mo stretchy="false">(</m:mo>
+                  <m:mi>P</m:mi>
+                  <m:mo stretchy="false">(</m:mo>
+                  <m:mi>R</m:mi>
+                  <m:mo stretchy="false">)</m:mo>
+                 
+                </m:mrow>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{E \) =P \( E \lline R \)  \( P \( R \)  \) } {}</m:annotation>
+        </m:semantics>
+      </m:math>)
+     </item><item> <m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>R</m:mi></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{P \( R} {}</m:annotation></m:semantics><m:mspace width="2pt"/> <m:mtext>OR </m:mtext>
+<m:mspace width="2pt"/><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mi>E</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{E \) } {}</m:annotation></m:semantics></m:math>. (Addition Rule: <m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>R</m:mi></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{P \( R} {}</m:annotation></m:semantics><m:mspace width="2pt"/><m:mtext> OR </m:mtext>
+<m:mspace width="2pt"/><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mi>E</m:mi><m:mrow><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">=</m:mo><m:mi>P</m:mi></m:mrow><m:mo stretchy="false">(</m:mo><m:mi>E</m:mi><m:mrow><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">+</m:mo><m:mi>P</m:mi></m:mrow><m:mo stretchy="false">(</m:mo><m:mi>R</m:mi><m:mrow><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">−</m:mo><m:mi>P</m:mi></m:mrow><m:mo stretchy="false">(</m:mo><m:mi>E</m:mi></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{E \) =P \( E \) +P \( R \)  - P \( E} {}</m:annotation></m:semantics><m:mspace width="2pt"/><m:mtext> AND 
+</m:mtext><m:mspace width="2pt"/><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mi>R</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{R \) } {}</m:annotation></m:semantics></m:math>)</item><item> Are the events 
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mi>R</m:mi>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{R} {}</m:annotation>
+        </m:semantics>
+      </m:math>
+     and 
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mi>G</m:mi>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{G} {}</m:annotation>
+        </m:semantics>
+      </m:math>
+     mutually exclusive? Why or why not?</item><item> Are the events 
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mi>G</m:mi>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{G} {}</m:annotation>
+        </m:semantics>
+      </m:math>
+     and 
+      <m:math>
+        <m:semantics>
+          <m:mrow>
+            <m:mstyle fontsize="12pt">
+              <m:mrow>
+                <m:mi>E</m:mi>
+              </m:mrow>
+            </m:mstyle>
+            <m:mrow/>
+          </m:mrow>
+          <m:annotation encoding="StarMath 5.0"> size 12{E} {}</m:annotation>
+        </m:semantics>
+      </m:math>
+     independent? Why or why not?</item></list>
+    </example>
+    
+ <example id="ex2">
+    <exercise id="exer1"><problem id="idp804192"><para id="problem1"><emphasis>(Optional Topic)</emphasis> A <emphasis>Venn diagram</emphasis> is a tool that helps to simplify probability problems. Introduce a Venn diagram using an example. Example: Suppose 40% of the students at ABC College belong to a club and 50% of the student body work part time. Five percent of the student body works part time and belongs to a club.</para>
+    <para id="problem1_2">Have the students work in groups to draw an appropriate Venn diagram after you have shown them what a Venn diagram basically looks like. The diagram should consist of a rectangle with two overlapping circles. One rectangle represents the students who belong to a club (40%) and the other circle represents those students who work part time (50%). The overlapping part are those students who belong to a club and who work part time (5%). </para>
+    
+    <list id="list2" list-type="enumerated"><title>Find the following:</title><item><m:math><m:mtext>P(student works part time but does not belong to a club)</m:mtext></m:math></item>
+<item><m:math><m:mtext>P(student belongs to a club given that the student works part time)</m:mtext></m:math></item>
+<item><m:math><m:mtext>P(student does not belong to a club)</m:mtext></m:math></item>
+<item><m:math><m:mtext>P(works part time given that the student belongs to a club)</m:mtext></m:math></item>
+<item><m:math><m:mtext>P(student belongs to a club or the student works part time)</m:mtext></m:math></item></list></problem>
+    
+    
+    
+    
+    <solution id="idm912624"><figure id="idm912496"><media id="idp5254496" alt="A venn diagram with a 5% overlap"><image src="../../media/venndiagram.PNG" mime-type="image/png" print-width="3in"/></media>
+</figure><list id="id14177215" list-type="labeled-item"><item><label>C</label> student belongs to a club</item>
+      <item><label>PT</label> student works part time</item>
+    </list></solution></exercise></example>
+<example id="cc2325">
+
+    <exercise id="exer2"><problem id="idm2621120"><list id="list3" list-type="enumerated"><title>Find the following:</title><item><m:math><m:mtext>P(a child is 9 - 11 years old)</m:mtext></m:math></item>
+<item><m:math><m:mtext>P(a child prefers regular soccer camp)</m:mtext></m:math></item>
+<item><m:math><m:mtext>P(a child is 9 - 11 years old and prefers regular soccer camp)</m:mtext></m:math></item>
+<item><m:math><m:mtext>P(a child is 9 - 11 years old or prefers regular soccer camp)</m:mtext></m:math></item>
+<item><m:math><m:mtext>P(a child is over 14 given that the child prefers micro soccer camp)</m:mtext></m:math></item>
+<item><m:math><m:mtext>P(a child prefers micro soccer camp given that the child is over 14) </m:mtext></m:math></item></list></problem></exercise></example>
+    
+    
+    <para id="id1404642e03"><title>Tree Diagrams (Optional Topic)</title>A <emphasis>tree</emphasis> is another probability tool. Many probability problems are simplified by a tree diagram. To exemplify this, suppose you want to draw two cards, one at a time, <emphasis>without replacement</emphasis> from the box of 4 red cards and 9 green cards.</para>
+    
+
+    
+    
+<para id="element-423"><figure id="idm1093584"><media id="idm4340416" alt="A Tree diagram that illustrates the possible outcomes of the above card experiment"><image src="../../media/tg_tree_dia.png" mime-type="image/png" print-width="3in"/></media><caption>
+     There are (13)(12) = 156 Possible Outcomes. (ex. R1R1, R1R2, R1G3, G3G4, etc.)
+   </caption></figure></para><example id="ex4">    
+    <exercise id="exer3"><problem id="idm5101392">
+   <list id="list4" list-type="enumerated"><title>Find the following:</title><item><m:math><m:mtext>P(RR)</m:mtext></m:math></item>
+<item><m:math><m:mtext>P(RG or GR)</m:mtext></m:math></item>
+<item><m:math><m:mtext>P(at most one G in two draws)</m:mtext></m:math></item>
+<item><m:math><m:mtext>P(G on the 2nd draw|R on the 1st draw)</m:mtext></m:math>. The size of the sample space has been reduced to <m:math><m:mn>12</m:mn><m:mo>+</m:mo><m:mn>36</m:mn><m:mo>=</m:mo><m:mn>481</m:mn></m:math>.</item>
+<item><m:math><m:mtext>P(no R on the 1st draw)</m:mtext></m:math></item></list></problem></exercise></example>
+    
+    
+    <para id="cd1342">Introduce <emphasis>contingency tables</emphasis> as another tool to calculate probabilities. Let's suppose an owner of a soccer camp for children keeps information concerning the type of soccer camp the children prefer and their ages. The data is for 572 children.</para>
+    <table id="id13282264" summary="This table presents the different types of soccer camps in the first column and the number of students that attended each kind in the second column. The total number is summed up and displayed in the final row.">
+
+<tgroup cols="7"><colspec colnum="1" colname="header_c1"/>
+        <colspec colnum="2" colname="c2"/>
+        <colspec colnum="3" colname="c3"/>
+        <colspec colnum="4" colname="c4"/>
+        <colspec colnum="5" colname="c5"/>
+        <colspec colnum="6" colname="c6"/>
+        <colspec colnum="7" colname="c7"/>
+        <thead>
+          <row>
+            <entry>Type of Soccer Camp Preference</entry>
+            <entry>Under 6</entry>
+            <entry>6-8</entry>
+            <entry>9-11</entry>
+            <entry>12-14</entry>
+            <entry>Over 14</entry>
+            <entry>Row Total</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Micro </entry>
+            <entry>42</entry>
+            <entry>76</entry>
+            <entry>46</entry>
+            <entry>25</entry>
+            <entry>10</entry>
+            <entry>199</entry>
+          </row>
+          <row>
+            <entry>Regular</entry>
+            <entry>8</entry>
+            <entry>68</entry>
+            <entry>92</entry>
+            <entry>105</entry>
+            <entry>100</entry>
+            <entry>373</entry>
+          </row>
+          <row>
+            <entry>Column Total</entry>
+            <entry>50</entry>
+            <entry>144</entry>
+            <entry>138</entry>
+            <entry>130</entry>
+            <entry>110</entry>
+            <entry>572</entry>
+          </row>
+        </tbody>
+      
+</tgroup>
+</table>
+    <para id="id3242111"><title>Assign Practice</title>Assign <link document="m16839">Practice 1</link> and <link document="m16840">Practice 2</link>  in class. Have students work in groups.</para>
+    <para id="id12jf2"><title>Assign Lab</title>The Probability Lab is an excellent way to cement many of the ideas of probability. The lab is a group effort (3 - 4 students per group).</para>
+    <para id="id234232"><title>Assign Homework</title>Assign <link document="m16836">Homework</link>. Suggested problems: 1 - 15 odds, 19, 20, 21, 23, 27, 28 - 30.</para>
+    
+  </content>
+</document>

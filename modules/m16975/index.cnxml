@@ -1,0 +1,147 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Confidence Intervals: Teacher's Guide</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>ee6359d0-667d-466b-911b-92f6bef4d10e</md:uuid>
+</metadata>
+  <content>
+    <para id="element-263">Confidence intervals can be difficult for students. This chapter discusses confidence intervals for a single mean and for a single proportion. In this course, we do not deal with confidence intervals for two means or two proportions. For a single mean, confidence intervals are calculated when <m:math><m:mi>σ</m:mi></m:math> is known and when <m:math><m:mi>σ</m:mi></m:math> is not known (<m:math><m:mi>s</m:mi></m:math> is used as an estimate for <m:math><m:mi>σ</m:mi></m:math>).</para><list id="element-584" list-type="bulleted"><title>Book notation:</title><item>CL = confidence level</item>
+<item>EBM = error bound for a mean</item>
+<item>EBP = error bound for a proportion</item></list><para id="element-741">The student-t distribution in introduced in this chapter beginning with a little history:
+<note type="history" id="idm4807440"><label>History</label>William Gossett derived the t-distribution in 1908. He needed a method for dealing with small samples (less than 30) in his research on temperature at the Guinness Brewery. Legend has it that the name Student-t comes from the fact that Gossett wrote a paper about the t-distribution and signed the paper <emphasis>Student</emphasis> because he was too modest to use his own name.</note></para><para id="element-451">If you sample from a normal distribution in which <m:math><m:mi>σ</m:mi></m:math> is not known, replace <m:math><m:mi>σ</m:mi></m:math> with <m:math><m:mi>s</m:mi></m:math>, the sample standard deviation, and use the Student-t distribution. The shape of the curve depends on the parameter degrees of freedom (<m:math><m:mi>df</m:mi></m:math>). <m:math><m:mi>df</m:mi><m:mo>=</m:mo><m:mi>n</m:mi><m:mo>−</m:mo><m:mi>1</m:mi></m:math> where <m:math><m:mi>n</m:mi></m:math> is the sample size.</para>
+<note type="Notation" id="idm5491088"><label>Notation</label><m:math><m:msup><m:mi>t</m:mi><m:mi>df</m:mi></m:msup></m:math> designates the distribution. We use <m:math><m:mi>T</m:mi></m:math> as the random variable. <emphasis>Value</emphasis> is an average.
+</note>
+
+<para id="element-333"><title>The t-statistic (t-score)</title><m:math><m:mi>t</m:mi><m:mo> = </m:mo><m:mfrac><m:mrow><m:mtext>value</m:mtext><m:mo>-</m:mo><m:mi>μ</m:mi></m:mrow>
+<m:mrow><m:mo>(</m:mo><m:mfrac><m:mrow><m:mi>σ</m:mi></m:mrow>
+<m:msqrt><m:mi>n</m:mi></m:msqrt></m:mfrac><m:mo>)</m:mo>
+</m:mrow></m:mfrac></m:math></para><para id="element-638">The relationship between the confidence interval for a single mean (when <m:math><m:mi>σ</m:mi></m:math> and the confidence level can be shown in a picture as follows:</para><para id="element-353"><figure id="idp3626128"><media id="idp1465296" alt="Graph illustrating the distribution of a confidence interval when the mean value is known and the confidence level."><image src="../../media/graphthing4.PNG" mime-type="image/png" print-width="3in"/></media><caption>   The 
+<m:math><m:mfrac><m:mi>α</m:mi><m:mn>2</m:mn></m:mfrac></m:math> subscript indicates that the area to the right is 
+<m:math><m:mfrac><m:mi>α</m:mi><m:mn>2</m:mn></m:mfrac></m:math>.</caption></figure></para>
+
+<list id="list03" list-type="bulleted"><title>Formulas for the error bounds:</title><item>Single mean (known <m:math><m:mi>σ</m:mi></m:math>): <m:math><m:mtext>EBM</m:mtext><m:mo>=</m:mo><m:msub><m:mi>z</m:mi><m:mrow><m:mfrac><m:mi>α</m:mi>
+<m:mn>2</m:mn></m:mfrac></m:mrow></m:msub><m:mo>⋅</m:mo><m:mo>(</m:mo>
+<m:mfrac><m:mi>σ</m:mi><m:msqrt><m:mi>n</m:mi></m:msqrt></m:mfrac><m:mo>)</m:mo></m:math></item>
+
+
+<item>Single mean (unknown <m:math><m:mi>σ</m:mi></m:math>): <m:math><m:mtext>EBM</m:mtext><m:mo>=</m:mo><m:msub><m:mi>t</m:mi><m:mrow><m:mfrac><m:mi>α</m:mi>
+<m:mn>2</m:mn></m:mfrac></m:mrow></m:msub><m:mo>⋅</m:mo><m:mo>(</m:mo>
+<m:mfrac><m:mi>s</m:mi><m:msqrt><m:mi>n</m:mi></m:msqrt></m:mfrac><m:mo>)</m:mo></m:math></item>
+
+
+<item>Binomial proportion: 
+<m:math><m:mtext>EBP</m:mtext><m:mo>=</m:mo><m:msub><m:mi>z</m:mi><m:mfrac><m:mi>α</m:mi>
+<m:mn>2</m:mn></m:mfrac></m:msub><m:mo>⋅</m:mo><m:msqrt><m:mfrac><m:mrow><m:mi>p</m:mi><m:mi>'</m:mi><m:mi>q</m:mi>
+<m:mi>'</m:mi></m:mrow><m:mi>n</m:mi></m:mfrac></m:msqrt></m:math> where 
+      <m:math><m:mi>q</m:mi><m:mo stretchy="false">=</m:mo><m:mn>1</m:mn><m:mo stretchy="false">−</m:mo>
+                      <m:mi>p</m:mi><m:mi>'</m:mi></m:math>
+    </item>
+</list><list id="element-908" list-type="bulleted"><title>The confidence intervals have the form:</title><item>Single mean (unknown or known 
+<m:math><m:mi>σ</m:mi></m:math> ):
+<m:math><m:mo>(</m:mo><m:mover><m:mi>x</m:mi><m:mi>-</m:mi></m:mover> <m:mo>-</m:mo><m:mtext>EBM</m:mtext><m:mo>,</m:mo> <m:mover><m:mi>x</m:mi><m:mi>-</m:mi></m:mover> <m:mo>+</m:mo><m:mtext>EBM</m:mtext><m:mo>)</m:mo></m:math>
+
+</item>
+
+<item>Binomial proportion: 
+<m:math><m:mo>(</m:mo><m:mi>p'</m:mi> <m:mo>-</m:mo><m:mtext>EBP</m:mtext><m:mo>,</m:mo> <m:mi>p'</m:mi> <m:mo>+</m:mo><m:mtext>EBP</m:mtext><m:mo>)</m:mo></m:math>
+
+</item></list><example id="element-453"><exercise id="exex1">
+<problem id="idm167040"><para id="para11">The number of calories in fast food is always of interest. A survey was taken from 7 fast food restaurants concerning the number of calories in 4 ounces of french fries. The data is 296, 329, 306, 324, 292, 310, 350. Construct a 95% confidence interval for the true average number of calories in a 4 ounce serving of french fries.</para></problem><solution id="idm4014624"><para id="para21">You want a confidence interval for a single mean where 
+<m:math><m:mi>σ</m:mi></m:math> is not known. If you use the TI-83/84 series, enter the data into a list and then use the function TInterval, data option. C-level is 95. The confidence interval is (296.4, 334.2). This function also calculates the sample mean (315.3) and sample standard deviation (20.4). TInterval is found in <code>STAT TESTS.</code></para><para id="element-3271">If you want the students to use the formulas for a normal or for the Student-t confidence interval, you will need to use a table for the z-score or the t-score. The book does not have the tables but the Internet has several. Do a search on "z-score table" and "Student-t table."</para><para id="element-3411">First, you need to calculate the sample mean and the sample standard deviation.<list id="list31"><item>
+      <m:math><m:mover><m:mn>x</m:mn><m:mo>-</m:mo></m:mover><m:mo> =</m:mo><m:mn>315.29</m:mn></m:math>
+    </item>
+<item>
+    <m:math><m:mi>s</m:mi><m:mo>=</m:mo><m:mn>20.40</m:mn></m:math>
+    </item></list></para><para id="sidhga1">The confidence interval has the pattern : <m:math><m:mo>(</m:mo><m:mover><m:mi>x</m:mi><m:mi>-</m:mi></m:mover> <m:mo>-</m:mo><m:mtext>EBM</m:mtext><m:mo>,</m:mo> <m:mover><m:mi>x</m:mi><m:mi>-</m:mi></m:mover> <m:mo>+</m:mo><m:mtext>EBM</m:mtext><m:mo>)</m:mo></m:math></para><para id="element-5851">The error bound formula is : <m:math><m:mtext>EBM </m:mtext><m:mo>=</m:mo> <m:msub><m:mi>t</m:mi><m:mfrac><m:mi>α</m:mi><m:mn>2</m:mn></m:mfrac></m:msub>
+<m:mo>⋅</m:mo><m:mo>(</m:mo><m:mfrac><m:mi>s</m:mi><m:msqrt><m:mi>n</m:mi></m:msqrt></m:mfrac>
+<m:mo>)</m:mo></m:math></para><para id="element-1328"><m:math><m:mtext>CL</m:mtext> <m:mo>=</m:mo> <m:mn>0.95</m:mn></m:math> so <m:math><m:mi>α</m:mi><m:mo>=</m:mo><m:mn>0.05</m:mn></m:math>. Therefore, <m:math><m:mfrac><m:mi>α</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>=</m:mo><m:mn>0.025</m:mn></m:math>.</para><para id="jjj1">Using the Student-t table with <m:math><m:mi>df</m:mi> <m:mo>=</m:mo> <m:mn>7</m:mn><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>=</m:mo><m:mn>6</m:mn></m:math> , <m:math><m:msub><m:mi>t</m:mi><m:mn>.025</m:mn></m:msub> <m:mo>=</m:mo> <m:mn>2.45</m:mn></m:math>.</para><para id="kk1k"><figure id="idp343520"><media id="idm3341840" alt="Distribution curve with 90% of the data in the mean, and 10% in each adjacent deviation"><image src="../../media/graphthing2.PNG" mime-type="image/png" print-width="4.5in"/></media></figure></para><para id="element-7891"><m:math>
+<m:mtext>EBM</m:mtext><m:mo>=</m:mo>
+<m:msub><m:mi>t</m:mi><m:mfrac><m:mi>α</m:mi>
+<m:mn>2</m:mn></m:mfrac></m:msub><m:mo>⋅</m:mo><m:mo>(</m:mo><m:mfrac><m:mi>s</m:mi>
+<m:msqrt><m:mi>n</m:mi></m:msqrt></m:mfrac><m:mo>)</m:mo><m:mo>=</m:mo>
+<m:msub><m:mi>t</m:mi><m:mn>0.25</m:mn></m:msub><m:mo>⋅</m:mo>
+<m:mfrac><m:mn>20.40</m:mn><m:msqrt><m:mn>7</m:mn></m:msqrt></m:mfrac><m:mo>=</m:mo>
+<m:mn>2.45</m:mn><m:mo>⋅</m:mo><m:mfrac><m:mn>20.40</m:mn><m:msqrt><m:mn>7</m:mn></m:msqrt></m:mfrac>
+<m:mo>=</m:mo><m:mn>18.89</m:mn></m:math></para><para id="lll1">The confidence interval is <m:math><m:mo>(</m:mo><m:mover><m:mi>x</m:mi><m:mi>-</m:mi></m:mover> <m:mo>-</m:mo><m:mtext>EBM</m:mtext><m:mo>,</m:mo> <m:mover><m:mi>x</m:mi><m:mi>-</m:mi></m:mover> <m:mo>+</m:mo><m:mtext>EBM</m:mtext><m:mo>)</m:mo></m:math> = (315.29 - 18.89, 315.29 +18.89) = (296.4, 334.2)</para><para id="element-8021">We are 95% confident that the true average number of calories in a 4 ounce serving of french fries is between 196.4 and 334.2 calories.</para></solution>
+
+
+</exercise>
+</example><example id="element-322"><exercise id="ufu">
+<problem id="idm4346576"><para id="pro11"> At a local cabana club, 102 of the 450 families who are members have children who swam on the swim team in 1995. Construct an 80% confidence interval for the true proportion of families with children who swim on the swim team in any year.</para></problem><solution id="idm16111648"><para id="sol11">You want a confidence interval for a single proportion. If you use the TI-83/84 series, use the function 1-PropZinterval. <m:math><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>102</m:mn></m:math> , <m:math><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>450</m:mn></m:math>, <m:math><m:mtext>C−level</m:mtext><m:mo>=</m:mo><m:mn>80</m:mn></m:math>. The confidence interval is (.2077, .2590)</para><para id="element-8241">If you want to use the formulas, first, you need to calculate the estimated proportion.</para><para id="element-8001"><m:math><m:mi>p'</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>x</m:mi><m:mi>n</m:mi></m:mfrac>
+<m:mo>=</m:mo><m:mfrac><m:mn>102</m:mn><m:mn>450</m:mn></m:mfrac><m:mo>=</m:mo>
+<m:mn>0.23</m:mn></m:math></para><para id="element-111">The confidence interval has the pattern 
+<m:math><m:mo>(</m:mo><m:mi>p'</m:mi> <m:mo>-</m:mo><m:mtext>EBP</m:mtext><m:mo>,</m:mo> <m:mi>p'</m:mi> <m:mo>+</m:mo><m:mtext>EBP</m:mtext><m:mo>)</m:mo></m:math>.</para><para id="element-3291">The error bound formula is 
+<m:math><m:mtext>EBP</m:mtext><m:mo>=</m:mo><m:msub><m:mi>z</m:mi><m:mfrac><m:mi>α</m:mi>
+<m:mn>2</m:mn></m:mfrac></m:msub><m:mo>⋅</m:mo><m:msqrt><m:mfrac><m:mrow><m:mi>p</m:mi><m:mi>'</m:mi><m:mi>q</m:mi>
+<m:mi>'</m:mi></m:mrow><m:mi>n</m:mi></m:mfrac></m:msqrt></m:math> where 
+      <m:math><m:mi>q</m:mi><m:mo stretchy="false">=</m:mo><m:mn>1</m:mn><m:mo stretchy="false">−</m:mo>
+                      <m:mi>p</m:mi><m:mi>'</m:mi></m:math></para><para id="element-6851"><m:math><m:mtext>CL</m:mtext><m:mo>=</m:mo><m:mn>0.80</m:mn></m:math> so <m:math><m:mi>α</m:mi><m:mo>=</m:mo><m:mn>0.20</m:mn></m:math>. Therefore, <m:math><m:mfrac><m:mi>α</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>=</m:mo>
+<m:mn>0.10</m:mn></m:math>.</para><para id="element-1101">Using the normal table (find one on the Internet), <m:math><m:msub><m:mi>z</m:mi><m:mn>.10</m:mn></m:msub><m:mo>=</m:mo><m:mn>1.28</m:mn></m:math>
+
+. (Remind students that 0.10 is the area to the right. The area to the left is 0.90.)</para><para id="element-3818"><m:math><m:mtext>EBP</m:mtext><m:mo>=</m:mo><m:msub><m:mi>z</m:mi><m:mfrac><m:mi>α</m:mi>
+<m:mn>2</m:mn></m:mfrac></m:msub><m:mo>⋅</m:mo><m:msqrt><m:mfrac><m:mrow><m:mi>p</m:mi><m:mi>'</m:mi><m:mi>q</m:mi>
+<m:mi>'</m:mi></m:mrow><m:mi>n</m:mi></m:mfrac></m:msqrt>
+
+<m:mo>=</m:mo><m:msub><m:mi>z</m:mi><m:mn>.10</m:mn></m:msub><m:mo>⋅</m:mo><m:msqrt><m:mfrac><m:mrow><m:mi>p</m:mi><m:mi>'</m:mi><m:mi>q</m:mi>
+<m:mi>'</m:mi></m:mrow><m:mi>n</m:mi></m:mfrac></m:msqrt>
+
+
+<m:mo>=</m:mo><m:msub><m:mi>z</m:mi><m:mn>.10</m:mn></m:msub><m:mo>⋅</m:mo><m:msqrt><m:mfrac><m:mrow>   <m:mn>.23</m:mn><m:mo>⋅</m:mo><m:mn>.77</m:mn></m:mrow><m:mi>n</m:mi></m:mfrac></m:msqrt>
+
+
+<m:mo>=</m:mo><m:mn>1.28</m:mn><m:mo>⋅</m:mo><m:msqrt><m:mfrac><m:mrow>   <m:mn>.23</m:mn><m:mo>⋅</m:mo><m:mn>.77</m:mn></m:mrow><m:mn>450</m:mn></m:mfrac></m:msqrt>
+
+<m:mo>=</m:mo><m:mn>0.03</m:mn></m:math>
+
+
+</para><para id="element-886">The confidence interval is : <m:math><m:mo>(</m:mo><m:mi>p'</m:mi> <m:mo>-</m:mo><m:mtext>EBP</m:mtext><m:mo>,</m:mo> <m:mi>p'</m:mi> <m:mo>+</m:mo><m:mtext>EBP</m:mtext><m:mo>)</m:mo></m:math> = (0.23 - 0.03, 0.23 + 0.03) = (0.20, 0.26)
+</para><para id="element-6931">We are 80% confident that the true proportion of families that have children on the swim team in any year is between 0.20 and 0.26.</para></solution>
+
+</exercise></example><para id="element-851"><title>Assign Practice</title>Assign the <link document="m16970">Practice 1</link>, <link document="m16971">Practice 2</link>, and <link document="m16968">Practice 3</link> in class to be done in groups.</para><para id="element-608"><title>Assign Homework</title>Assign <link document="m16966">Homework</link>. Suggested homework: 1, 5, 9, 13, 15, 17, 21, 23, 24 - 31.</para>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </content>
+</document>
